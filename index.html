@@ -43,9 +43,92 @@
     </header>
     <main>
       <h1 class="visuallyhidden">Gllacy shop</h1>
-      <!-- Slider section, items section, products section (next hometask) -->
 
+      <!-- PRODUCTS -->
+
+      <section class="product">
+        <h2>Товары</h2>
+
+        <ol class="slider">
+          <li>
+            <h3>Крем-брюле и пломбир <br>с малиновым джемом</h3>
+            <img src="https://via.placeholder.com/647x584" width="647" height="584" alt="Две мороженки">
+            <button type="button">Давайте оба!</button>
+          </li>
+          <li>
+            <h3>Шоколадный пломбир <br>и лимонный сорбет</h3>
+            <img src="https://via.placeholder.com/647x584" width="647" height="584" alt="Две мороженки">
+            <button type="button">Давайте оба!</button>
+          </li>
+          <li>
+            <h3>Пломбир с помадкой <br>и клубничный щербет</h3>
+            <img src="https://via.placeholder.com/647x584" width="647" height="584" alt="Две мороженки">
+            <button type="button">Давайте оба!</button>
+          </li>
+        </ol>
+
+        <ul class="product__blocks">
+          <li>
+            <strong>Малинка даром!</strong> 
+            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку маринового варенья бесплатно.</p>
+            <button type="button">Хочу варенье!</button>
+          </li>
+          <li>
+            <strong>Шоколадки даром!</strong> 
+            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+            <button type="button">Хочу шоколадки!</button>
+          </li>
+        </ul>
+        
+        <!-- Это список товаров, поэтому решила использовать список, а не артикл
+        и на странице каталога, тоже решила так сделать. Можно ведь так?  -->
+
+        <ul class="product__catalog">
+          <li class="catalog-item">
+            <a href="">
+              <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            </a>
+            <a href="">
+              <img src="https://via.placeholder.com/267x267" width="267" height="267" alt="Фотография мороженого">
+            </a>
+            <p>310&#8381;<span>/кг</span></p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li class="catalog-item">
+            <a href="">
+              <h3>Сливочно-кофейное с кусочками шоколада</h3>
+            </a>
+            <a href="">
+              <img src="https://via.placeholder.com/267x267" width="267" height="267" alt="Фотография мороженого">
+            </a>
+            <p>380&#8381;<span>/кг</span></p>
+          <button type="button">Быстрый просмотр</button>
+          </li>
+          <li class="catalog-item">
+            <a href="">
+              <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+            </a>
+            <a href="">
+              <img src="https://via.placeholder.com/267x267" width="267" height="267" alt="Фотография мороженого">
+            </a>
+            <p>355&#8381;<span>/кг</span></p>
+          <button type="button">Быстрый просмотр</button>
+          </li>
+          <li class="catalog-item">
+            <a href="">
+              <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+            </a>
+            <a href="">
+              <img src="https://via.placeholder.com/267x267" width="267" height="267" alt="Фотография мороженого">
+            </a>
+            <p>415&#8381;<span>/кг</span></p>
+          <button type="button">Быстрый просмотр</button>
+          </li>
+        </ul>
+      </section>
+      
       <!-- ABOUT -->
+
       <section class="about">
         <h2 class="visuallyhidden">О магазине</h2>
         <p>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</p>
@@ -58,40 +141,55 @@
       </section>
       
       <!-- BLOG ARTICLE -->
-      <!-- На лекции озвучивали что в этом макете типичный артикл, и вроде это логично. Но позже в чате Николай написал что если элемент на странице такой один, то он не может быть артиклом. ¯\_(ツ)_/¯ Сначала сделала артикл. Но теперь сомневаюсь. Так как лучше? -->
       <article>
         <p>Новое в нашем блоге</p>
-        <h2>10 способов сервировки фруктовых щербетов к столу</h2>
+        <a href="">
+          <h2>10 способов сервировки фруктовых щербетов к столу</h2>
+        </a>
       </article>
       
       <!-- SUBSCRIPTION  -->
-      <!-- сначала думала что это <section> но я так понимаю что это просто див, т.к. это не стуктурный подраздел сайта, а просто мелкий элемент. Я правильно поняла?  -->
-      <div class="subscription">
+      <form class="subscription">
         <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <input type="text" placeholder="email@example.com">
-        <button>Отправить</button>
-      </div>
+        <button type="submit">Отправить</button>
+      </form>
       
-      <!-- MAP (next hometask) -->
-
+      <!-- MAP -->
+      <section class="address">
+        <h2 class="visuallyhidden">Контакты</h2>
+        <img src="https://via.placeholder.com/1200x430" width="1200" height="430" alt="Карта">
+        <address>
+          Адрес главного офиса<br> и офлайн-магазина:
+          <b>ул. Большая Конюшенная,<br> 19/8, Санкт-Петербург</b>
+          Для заказов по телефону: <br>
+          <b>8 812 450-25-25</b>
+          (с 10 до 20 ежедневно)
+        </address>
+        <button type="button">Форма обратной связи</button>
+      </section>
     </main>
     <footer>
       <ul class="socials">
         <li>
-          <a href=""></a>
-          <!-- <svg></svg> -->
+          <a href="">
+            <!-- <svg></svg> -->
+          </a>
         </li>
         <li>
-          <a href=""></a>
-          <!-- <svg></svg> -->
+          <a href="">
+            <!-- <svg></svg> -->
+          </a>
         </li>
         <li>
-          <a href=""></a>
-          <!-- <svg></svg> -->
+          <a href="">
+            <!-- <svg></svg> -->
+          </a>
         </li>
         <li>
-          <a href=""></a>
-          <!-- <svg></svg> -->
+          <a href="">
+            <!-- <svg></svg> -->
+          </a>
         </li>
       </ul>
       <ul class="info">
@@ -100,7 +198,10 @@
         <li><a href=""></a>Наши документы</li>
         <li><a href=""></a>Экологические стандарты</li>
       </ul>
-      <a href=""></a>
+      <a href="">
+        <!-- <svg></svg> -->
+        <!-- todo: вставить svg -->
+      </a>
       <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>&copy;2019</p>
     </footer>
   </body>
