@@ -29,21 +29,19 @@
 
       <!-- FORMS -->
 
+      <a href="" aria-label="Поиск">
+        <span class="visuallyhidden">Искать</span>
+      </a>
       <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="get">
-        <button type="submit">
-          <img src="img/svg/loupe.svg" aria-label="Искать" aria-hidden="true" alt="">
-        </button>
         <label class="visuallyhidden" for="search">Поиск по сайту</label>
         <input type="search" id="search" name="search">
       </form>
 
-      <form class="enter-form" action="https://echo.htmlacademy.ru/courses" method="get">
-        <button type="submit">
-          <img src="img/svg/entrance.svg" aria-label="Войти" aria-hidden="true" alt="">
-        </button>
+      <a href="">Вход</a>
+      <form class="login-form" action="https://echo.htmlacademy.ru/courses" method="get">
         <p>
-          <label class="visuallyhidden" for="enter-email">Введите e-mail</label>
-          <input type="email" id="enter-email" name="email" required>
+          <label class="visuallyhidden" for="login-email">Введите e-mail</label>
+          <input type="email" id="login-email" name="email" required>
         </p>
         <p>
           <label class="visuallyhidden" for="password">Введите пароль</label>
@@ -54,20 +52,17 @@
         <a href="" aria-label="Страница регистрации">Новая регистрация</a>
       </form>
 
+      <a class="cart-empty" type="button">
+        <span>Пусто</span>
+      </a>
+      <a class="cart-full" type="button">
+        <span>2 товара</span>
+      </a>
       <form class="cart" action="https://echo.htmlacademy.ru/courses" method="get">
-        <button class="cart-empty" type="button">
-          <img src="img/svg/basket.svg" aria-label="Пустая корзина" aria-hidden="true" alt="">
-          <span>Пусто</span>
-        </button>
-        <button class="cart-full" type="button">
-          <img src="img/svg/basket-red.svg" aria-label="Корзина с товарами" aria-hidden="true" alt="">
-          <span>2 товара</span>
-        </button>
         <ul class="order-list">
           <li>
             <button type="button">
-              <img src="img/svg/cross-small.svg" alt="Закрыть">
-              <span class="visuallyhidden">Закрыть</span>
+              <span class="visuallyhidden">Удалить</span>
             </button>
             <a href="" aria-label="Пломбир с апельсиновым джемом"></a>
             <p>1,5 кг&#215;<span>200 руб.</span></p>
@@ -75,8 +70,7 @@
           </li>
           <li>
             <button type="button">
-              <img src="img/svg/cross-small.svg" alt="Закрыть">
-              <span class="visuallyhidden">Закрыть</span>
+              <span class="visuallyhidden">Удалить</span>
             </button>
             <a href="" aria-label="Клубничный пломбир с присыпкой из белого шоколада"></a>
             <p>1,5 кг&#215;<span>300 руб.</span></p>
@@ -92,7 +86,7 @@
     </header>
 
     <main>
-      <nav class="beardcrumbs">
+      <nav class="breadcrumbs">
         <ol>
           <li><a href="index.html" aria-label="На главную">Главная</a></li>
           <li><a href="" aria-label="Страница каталога товаров">Каталог</a></li>
@@ -112,8 +106,7 @@
               </select>
             </label>
             <p>Цена: 100 &#8381; - 500 &#8381;</p>
-  <!-- В этом курсе мы не сможем сделать этот ползунок. Вставить его просто картинкой? или вместо него вставить обычный range? -->
-            <input type="range" min=0 max=800 step=100>
+             <input type="range" min=0 max=800 step=100>
             <p>Жирность</p>
             <label>
               <input type="radio" id="fat-0" name="fat" value="0%">
@@ -152,8 +145,8 @@
           </fieldset>
         </form>
       </section>
-      <section>
-        <ul class="catalog">
+      <section class="catalog">
+        <ul class="catalog-list">
           <li class="catalog-item">
             <a href="">
               <h2>Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
@@ -162,7 +155,7 @@
               <img src="img/icecream1.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>310&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -172,7 +165,7 @@
               <img src="img/icecream2.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>380&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -182,7 +175,7 @@
               <img src="img/icecream3.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>355&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -192,7 +185,7 @@
               <img src="img/icecream4.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>415&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -202,7 +195,7 @@
               <img src="img/icecream5.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>325&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -212,7 +205,7 @@
               <img src="img/icecream6.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>410&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -222,7 +215,7 @@
               <img src="img/icecream7.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>315&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -232,7 +225,7 @@
               <img src="img/icecream8.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>320&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -242,7 +235,7 @@
               <img src="img/icecream9.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>440&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -252,7 +245,7 @@
               <img src="img/icecream10.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>435&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -262,7 +255,7 @@
               <img src="img/icecream11.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>355&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -272,36 +265,35 @@
               <img src="img/icecream12.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
             </a>
             <p>420&#8381;<span>/кг</span></p>
-            <button type="button">Быстрый просмотр</button>
+            <a href="">Быстрый просмотр</a>
           </li>
         </ul>
-        <ol class="pagination">
-          <li>
-            <a>  
-              <img src="img/svg/icon-left-small.svg" alt="Назад">
-            </a>
-          </li>
-          <li>
-            <a href=""><span class="visuallyhidden">Текущая страница каталога</span>1</a>
-          </li>
-          <li>
-            <a href="">2</a>
-          </li>
-          <li>
-            <a href="">3</a>
-          </li>
-          <li>
-            <a href="">4</a>
-          </li>
-          <li>
-            <a href="">5</a>
-          </li>
-          <li>
-            <a href="">
-              <img src="img/svg/icon-right-small.svg" alt="Далее">
-            </a>
-        </li>
-        </ol>
+        
+        <section class="pagination">
+          <a>  
+            <span class="visuallyhidden">Назад</span>
+          </a>
+          <ol>
+            <li>
+              <a href=""><span class="visuallyhidden">Текущая страница каталога</span>1</a>
+            </li>
+            <li>
+              <a href="">2</a>
+            </li>
+            <li>
+              <a href="">3</a>
+            </li>
+            <li>
+              <a href="">4</a>
+            </li>
+            <li>
+              <a href="">5</a>
+            </li>
+          </ol>
+          <a href="">
+            <span class="visuallyhidden">Далее</span>
+          </a>
+        </section>
       </section>
 
     </main>
@@ -310,25 +302,21 @@
         <li>
           <a href="" title="Наша страница в Фейсбук">
             <span class="visuallyhidden">Наша страница в Фейсбук</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path fill="#FFF" d="M16 0a16 16 0 100 32 16 16 0 000-32zm4.06 9.46h-3.02v3.44h3.02v3.44h-3.02v8.61h-3.02v-8.6H11V12.9h3.02V9.45c0-1.9 1.35-3.44 3.02-3.44h3.02v3.44z"/></svg>
           </a>
         </li>
         <li>
           <a href="" title="Наша страница в Вконтакте">
             <span class="visuallyhidden">Наша страница в Вконтакте</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="#FFF"><path d="M16.64 14.5c.4-.02.72-.09.95-.2.32-.14.54-.32.64-.55.1-.23.15-.5.15-.8 0-.23-.06-.46-.18-.7-.11-.23-.32-.4-.61-.51-.27-.1-.6-.16-.99-.17a76.24 76.24 0 00-1.65-.01h-.34v2.96h.57c.57 0 1.05 0 1.46-.02zm1.48 2.58a4.65 4.65 0 00-1.17-.13 127.97 127.97 0 00-1.55 0h-.79v3.49h.27l2.18-.01a3.2 3.2 0 001.2-.25c.38-.16.64-.36.78-.62s.22-.57.22-.9c0-.45-.1-.8-.27-1.03a1.56 1.56 0 00-.87-.55z"/><path d="M16 0a16 16 0 100 32 16 16 0 000-32zm6.6 20.53a3.73 3.73 0 01-1.12 1.33c-.55.41-1.16.7-1.82.88s-1.5.27-2.52.27h-6.12V8.99h5.44c1.13 0 1.96.03 2.48.11a5.13 5.13 0 011.56.5c.53.27.93.63 1.19 1.09.26.45.39.97.39 1.55 0 .68-.18 1.28-.54 1.8a3.5 3.5 0 01-1.51 1.2v.08c.91.18 1.64.56 2.18 1.13.53.57.8 1.33.8 2.26 0 .68-.14 1.29-.4 1.82z"/></g></svg>
           </a>
         </li>
         <li>
           <a href="" title="Наша страница в Инстаграм">
             <span class="visuallyhidden">Наша страница в Инстаграм</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="#FFF"><path d="M20.92 16a4.94 4.94 0 11-9.88 0c0-.4.05-.77.14-1.14h-.9v6.84h11.4v-6.84h-.9c.09.37.14.75.14 1.14z"/><path d="M15.98 18.66a2.66 2.66 0 100-5.33 2.66 2.66 0 000 5.33zm2.66-8.36h3.04v3.04h-3.04z"/><path d="M16 0a16 16 0 100 32 16 16 0 000-32zm7.96 21.7a2.29 2.29 0 01-2.28 2.28h-11.4A2.29 2.29 0 018 21.7V10.3a2.29 2.29 0 012.28-2.28h11.4a2.29 2.29 0 012.27 2.28v11.4z"/></g></svg>
           </a>
         </li>
         <li>
           <a href="" title="Наша страница в Твиттер">
             <span class="visuallyhidden">Наша страница в Твиттер</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path fill="#FFF" d="M16 0a16 16 0 100 32 16 16 0 000-32zm7.94 12.8c-.25 6.52-3.46 10.84-10.99 10.71h-.48c-.45 0-4.55-.44-5.35-1.82 2.48.19 4.25-.4 5.12-1.14-1.05-.29-2.92-.46-3.25-2.85.38.1.62.23 1.3.12-1.3-.83-2.76-1.52-2.68-3.65.31.32 1.16.52 1.46.46-.77-.23-2.15-3.24-.97-4.78 1.98 1.79 4.07 3.48 7.8 3.64.23-2.21 1.24-3.7 3.17-4.32 1.84-.48 3.25.26 3.9 1.14.74-.23 1.45-.47 2.2-.69-.01.83-.58 1.46-.94 1.71.75.17 1.42-.47 1.42-.47a2.92 2.92 0 01-1.7 1.95z"/></svg>
           </a>
         </li>
       </ul>
@@ -343,5 +331,6 @@
       </a>
       <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсив по верстке, уровень 1">HTML Academy</a>&copy;2019</p>
     </footer>
+
   </body>
 </html>
