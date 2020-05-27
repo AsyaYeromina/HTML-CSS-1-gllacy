@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy shop - Магазин мороженого</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
   <body>
     <header>
       <img src="img/svg/logo.svg" width="154" height="64" alt="Логотип Gllacy shop" class="logo">
       <nav>
-        <ul>
+        <ul class="main-navigation">
           <li aria-haspopup="true"><a href="" aria-label="Каталог">Каталог</a>
             <ul>
               <li><a href="" aria-label="Новинки">Новинки</a></li>
@@ -94,17 +96,17 @@
           <li class="slide-1">
             <h3>Крем-брюле и пломбир <br>с малиновым джемом</h3>
             <img src="img/icecream-slider-1.png" width="647" height="584" alt="Две мороженки. Крем-брюле и пломбир с малиновым джемом">
-            <a href="">Давайте оба!</a>
+            <a class="button" href="">Давайте оба!</a>
           </li>
           <li class="slide-2">
             <h3>Шоколадный пломбир <br>и лимонный сорбет</h3>
             <img src="img/icecream-slider-2.png" width="647" height="584" alt="Две мороженки. Шоколадный пломбир и лимонный сорбет">
-            <a href="">Давайте оба!</a>
+            <a class="button" href="">Давайте оба!</a>
           </li>
           <li class="slide-3">
             <h3>Пломбир с помадкой <br>и клубничный щербет</h3>
             <img src="img/icecream-slider-3.png" width="647" height="584" alt="Две мороженки. Пломбир с помадкой и клубничный щербет">
-            <a href="">Давайте оба!</a>
+            <a class="button" href="">Давайте оба!</a>
           </li>
         </ol>
         <div class="slider-switcher">
@@ -122,12 +124,12 @@
           <li>
             <strong>Малинка даром!</strong> 
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a href="">Хочу варенье!</a>
+            <a class="button" href="">Хочу варенье!</a>
           </li>
           <li>
             <strong>Шоколадки даром!</strong> 
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a href="">Хочу шоколадки!</a>
+            <a class="button" href="">Хочу шоколадки!</a>
           </li>
         </ul>
 
@@ -146,7 +148,7 @@
               <span class="visuallyhidden">Хит продаж</span>
             </a>
             <p>310&#8381;<span>/кг</span></p>
-            <a href="">Быстрый просмотр</a>
+            <a class="button" href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -157,7 +159,7 @@
               <span class="visuallyhidden">Хит продаж</span>
             </a>
             <p>380&#8381;<span>/кг</span></p>
-          <a href="">Быстрый просмотр</a>
+           <a class="button" href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -168,7 +170,7 @@
               <span class="visuallyhidden">Хит продаж</span>
             </a>
             <p>355&#8381;<span>/кг</span></p>
-          <a href="">Быстрый просмотр</a>
+            <a class="button" href="">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="">
@@ -179,7 +181,7 @@
               <span class="visuallyhidden">Хит продаж</span>
             </a>
             <p>415&#8381;<span>/кг</span></p>
-          <a href="">Быстрый просмотр</a>
+            <a class="button" href="">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -210,7 +212,7 @@
         <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <input type="email" id="subscription-form" placeholder="email@example.com">
         <label for="subscription-form" class="visuallyhidden">Введите свой email</label>
-        <button type="submit">Отправить</button>
+        <button type="submit" class="button">Отправить</button>
       </form>
       
       <!-- MAP -->
@@ -224,7 +226,7 @@
           <b>8 812 450-25-25</b>
           (с 10 до 20 ежедневно)
         </p>
-        <a href="">Форма обратной связи</ф>
+        <a href="" class="button">Форма обратной связи</ф>
       </section>
     </main>
     <footer>
@@ -279,7 +281,7 @@
           <textarea name="message" id="message" rows="7" cols="50" required>В свободной форме</textarea>
         </p>
       </fieldset>
-      <button type="submit">Отправить</button>
+      <button type="submit" class="button">Отправить</button>
     </form>
 
   </body>

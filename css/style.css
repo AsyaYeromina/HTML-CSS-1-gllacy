@@ -1,0 +1,88 @@
+/* Variables */
+:root {
+    --basic-white: #ffffff;
+    --basic-dark-text-color: #323232;
+    --basic-grey-text-color: #5a5a5a;
+    --inputs-semi-light-text-color: #999999;
+    --input-border-color: #b2b2b2; 
+    --input-focus-border-color: #2E88E4;
+    --form-background-color: #F8F7F4;
+    --accent-light-color: #FFBC9E;
+    --accent-dark-color: #E84D37;
+    --nav-light-color: #FBDED7;
+    --nav-medium-color: #F6B5A5;
+    --nav-dark-color: #D07058;
+    --nav-active-color: #EDEDED;
+    --button-light-color: #F26843;
+    --button-dark-color: #E74A35;
+    --main-background1: #849D8F;
+    --main-background2: #8996A6;
+    --main-background3: #9D8B84;
+    --background-slider1-lighting: #EFE0DA;
+    --background-slider2-lighting: #DAE4EF;
+    --background-slider3-lighting: #D7F2E3;
+    --cart-black-text-color: #000000;
+    --cart-ligth-text-color: #ABABAB;
+    --contacts-background: #FEFEFE;
+}
+
+/* Global */
+body{
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    color: var(--basic-white);
+    background-color: var(--main-background1);
+}
+
+a {
+    text-decoration: none;
+    color: var(--basic-white);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Почему глобальные стили к спискам это плохая идея? (как указано в критериях)
+Списки все равно никогда не используются со стилями по умолчанию */
+
+li {
+    list-style: none;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+form {
+    display: none; 
+    /* временно спрятала до следующего домашнего задания */
+}
+
+/* Buttons */
+.button {
+    background: linear-gradient(var(--button-light-color), var(--button-dark-color));
+    padding: 16px 22px 13px 22px;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0px 2px 2px rgba(85, 8, 0, 0.54);
+    border-radius: 26px;
+}
+
+/* Navigation */
+
