@@ -51,10 +51,6 @@ a {
     color: var(--basic-white);
 }
 
-*, *::after, *::before{
-    box-sizing: border-box;
-}
-
 /* Special */
 
 .visuallyhidden:not(:focus):not(:active) {
@@ -109,84 +105,121 @@ a:active{
     border-radius: 70px;
 }
 
+/* Header  */
+
+.header-container{
+    display: flex;
+}
+
 /* Navigation */
 
 .main-navigation li, 
 .main-navigation > li > ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding:0;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
-.main-navigation__item a{
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+.main-navigation{
+    display: flex;
+    box-sizing: border-box;
 }
 
-.main-navigation__item a:hover{
+.main-navigation a{
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.2);
+    text-decoration-skip-ink: none;
+    padding: 9px 13px 11px 13px;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
     background-color: var(--basic-white);
     color: var(--basic-dark-text-color);
-    padding: 9px 13px 11px 13px;
+    border-radius: 26px;
+}
+
+.main-navigation a:active{
+    background-color: var(--nav-active-color);
+    box-shadow: inset 0px 2px 1px #696969;
+}
+
+.main-navigation__item:first-child > a{
+    text-decoration: none;
+    background-color: var(--nav-dark-color);
+    color: var(--basic-white);
     border-radius: 26px;
 }
 
 .main-navigation__sub{
     background-color: var(--basic-white);
-    height: 173px;
-    width: 141px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+    height: 171px;
+    width: 143px;
     border-radius: 4px;
-    padding-left: 0;
 }
 
-.main-navigation__subitem a{
+.main-navigation__sub > li {
+    padding: 0;
+}
+
+
+.main-navigation__subitem > a{
+    text-decoration: none;
     background-color: var(--basic-white);
     color: var(--basic-dark-text-color);
+    border-radius: 0;
     font-size: 14px;
     font-weight: 400;
-    line-height: 16px;
-    padding-left: 21px;
-    text-align: left;
+}
+
+.main-navigation__subitem > a:hover,
+.main-navigation__subitem > a:focus{
+    background-color: var(--nav-light-color);
     border-radius: 0;
 
-
-    /* todo display: block !  */
 }
 
+.main-navigation__subitem > a:active{
+    background-color: var(--nav-medium-color);
+}
 
+.current-page > a{
+    background-color: var(--nav-dark-color);
+}
 
-.main-navigation__subitem:first-child a{
+.user-navigation__button{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 26px;
+}
+
+.search-button > svg,
+.login-button > svg{
+    fill: var(--basic-white);
+}
+
+.search-button > svg:hover, 
+.search-button > svg:focus,
+.login-button > svg:hover,
+.login-button > svg:focus{
+    fill: var(--basic-dark-text-color);
+    color: var(--basic-dark-text-color);
+    background-color: var(--basic-white);
+}
+
+.cart-empty-button{
+
+}
+
+.short-info{
+    font-size: 14px;
     font-weight: 700;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    border-bottom: 1px solid rgba(50, 50, 50, 0.2);
 }
-
-.main-navigation__subitem a:hover,
-.main-navigation__subitem a:focus{
-    background-color: var(--nav-light-color);
+.short-info a{
+    font-size: 22px;
 }
-
-.main-navigation__subitem a:active{
-    background-color: var(--nav-medium-color);
-}
-
-.main-navigation__on-page,
-.main-navigation__subitem a:not([href]){
-    background-color: var(--nav-dark-color);
-    color: var(--basic-white);
-}
-
-/* .main-navigation__subitem a:not([href]){
-    background-color: var(--nav-medium-color);
-    color: var(--basic-white);
-}
-
-.main-navigation__subitem a:not([href])
-.main-navigation__on-page{
-    background-color: var(--nav-dark-color);
-    color: var(--basic-white);
-} */
-
-
 /* Slider */
 
 .slider{
@@ -434,7 +467,6 @@ footer::before{
     fill: rgba(255, 255, 255, 0.8);
     border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: 50%;
-    background-origin:content-box;
 }
 
 .socials svg:hover,
@@ -531,4 +563,5 @@ footer::before{
     /* временно спрятано до следующего домашнего задания */
 }
 
-/* todo: all colors and gradients to vars */
+
+/* todo: all colors and gradients to :root */

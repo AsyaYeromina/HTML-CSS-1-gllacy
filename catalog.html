@@ -8,16 +8,16 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
   <body>
-    <header>
+    <header class="header-container">
       <a href="index.html" aria-label="На главную">
         <img src="img/svg/logo.svg" width="154" height="64" alt="Логотип Gllacy shop" class="logo">
       </a>
       <nav>
         <ul class="main-navigation">
-          <li class="main-navigation__item main-navigation__on-page" aria-haspopup="true"><a href="" aria-label="Каталог">Каталог</a>
+          <li class="main-navigation__item" aria-haspopup="true"><a href="" aria-label="Каталог">Каталог</a>
             <ul class="main-navigation__sub">
               <li class="main-navigation__subitem"><a href="" aria-label="Новинки">Новинки</a></li>
-              <li class="main-navigation__subitem" aria-current="page"><a aria-label="Сливочное"><span class="visuallyhidden">Текущий пункт:</span>Сливочное</a></li>
+              <li class="main-navigation__subitem current-page" aria-current="page"><a aria-label="Сливочное"><span class="visuallyhidden">Текущий пункт:</span>Сливочное</a></li>
               <li class="main-navigation__subitem"><a href="" aria-label="Щербеты">Щербеты</a></li>
               <li class="main-navigation__subitem"><a href="" aria-label="Фруктовый лед">Фруктовый лед</a></li>
               <li class="main-navigation__subitem"><a href="" aria-label="Мелорин">Мелорин</a></li>
@@ -30,60 +30,66 @@
       </nav>
 
       <!-- FORMS -->
+      <div class="user-navigation">
+        <a class="user-navigation__button search-button" href="" aria-label="Поиск">
+          <span class="visuallyhidden">Искать</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+            <path d="M16.96 15.53l-5.21-5.21A6.46 6.46 0 0013 6.5 6.5 6.5 0 106.5 13a6.46 6.46 0 003.84-1.26l5.2 5.2 1.42-1.41zM6.5 11a4.5 4.5 0 11.01-9.01A4.5 4.5 0 016.5 11z"/>
+          </svg>
+        </a>
+        <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="get">
+          <label class="visuallyhidden" for="search">Поиск по сайту</label>
+          <input type="search" id="search" name="search">
+        </form>
 
-      <a href="" aria-label="Поиск">
-        <span class="visuallyhidden">Искать</span>
-      </a>
-      <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="get">
-        <label class="visuallyhidden" for="search">Поиск по сайту</label>
-        <input type="search" id="search" name="search">
-      </form>
+        <a class="user-navigation__button login-button" href="">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"><path d="M6 14.88l6.92-5.38L6 4.12v2.92H-.04v4.92H6z"/><path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13a2 2 0 002-2V2a2 2 0 00-2-2z"/></svg>
+          <span>Вход</span>
+        </a>
+        <form class="login-form" action="https://echo.htmlacademy.ru/courses" method="get">
+          <p>
+            <label class="visuallyhidden" for="login-email">Введите e-mail</label>
+            <input type="email" id="login-email" name="email" required>
+          </p>
+          <p>
+            <label class="visuallyhidden" for="password">Введите пароль</label>
+            <input type="password" id="password" name="password" required>
+          </p>
+          <button type="submit">Войти</button>
+          <a href="" aria-label="Страница востановления пароля">Забыли пароль?</a>
+          <a href="" aria-label="Страница регистрации">Новая регистрация</a>
+        </form>
 
-      <a href="">Вход</a>
-      <form class="login-form" action="https://echo.htmlacademy.ru/courses" method="get">
-        <p>
-          <label class="visuallyhidden" for="login-email">Введите e-mail</label>
-          <input type="email" id="login-email" name="email" required>
-        </p>
-        <p>
-          <label class="visuallyhidden" for="password">Введите пароль</label>
-          <input type="password" id="password" name="password" required>
-        </p>
-        <button type="submit">Войти</button>
-        <a href="" aria-label="Страница востановления пароля">Забыли пароль?</a>
-        <a href="" aria-label="Страница регистрации">Новая регистрация</a>
-      </form>
-
-      <a class="cart-empty">
-        <span>Пусто</span>
-      </a>
-      <a href="" class="cart-full">
-        <span>2 товара</span>
-      </a>
-      <form class="cart" action="https://echo.htmlacademy.ru/courses" method="get">
-        <ul class="order-list">
-          <li>
-            <a href="">
-              <span class="visuallyhidden">Удалить</span>
-            </a>
-            <a href="" aria-label="Пломбир с апельсиновым джемом"></a>
-            <p>1,5 кг&#215;<span>200 руб.</span></p>
-            <p>300 руб.</p>
-          </li>
-          <li>
-            <a href="">
-              <span class="visuallyhidden">Удалить</span>
-            </a>
-            <a href="" aria-label="Клубничный пломбир с присыпкой из белого шоколада"></a>
-            <p>1,5 кг&#215;<span>300 руб.</span></p>
-            <p>450 руб.</p>
-          </li>
-        </ul>
-        <p>Итого: 750 руб.</p>
-        <button type="submit">Оформить заказ</button>
-      </form>
-
-      <p>с 10 до 20, ежедневно<br><a href="tel:88124502525">8 812 450-25-25</a></p>
+        <a class="user-navigation__button cart-empty-button">
+          <span>Пусто</span>
+        </a>
+        <a href="" class="cart-full">
+          <span>2 товара</span>
+        </a>
+        <form class="cart" action="https://echo.htmlacademy.ru/courses" method="get">
+          <ul class="order-list">
+            <li>
+              <a href="">
+                <span class="visuallyhidden">Удалить</span>
+              </a>
+              <a href="" aria-label="Пломбир с апельсиновым джемом"></a>
+              <p>1,5 кг&#215;<span>200 руб.</span></p>
+              <p>300 руб.</p>
+            </li>
+            <li>
+              <a href="">
+                <span class="visuallyhidden">Удалить</span>
+              </a>
+              <a href="" aria-label="Клубничный пломбир с присыпкой из белого шоколада"></a>
+              <p>1,5 кг&#215;<span>300 руб.</span></p>
+              <p>450 руб.</p>
+            </li>
+          </ul>
+          <p>Итого: 750 руб.</p>
+          <button type="submit">Оформить заказ</button>
+        </form>
+      </div>
+      <p class="short-info">с 10 до 20, ежедневно<br><a href="tel:88124502525">8 812 450-25-25</a></p>
       
     </header>
 
@@ -300,7 +306,6 @@
           </a>
         </section>
       </section>
-
     </main>
     <footer>
       <ul class="socials">
