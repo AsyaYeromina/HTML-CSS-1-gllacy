@@ -51,6 +51,10 @@ a {
     color: var(--basic-white);
 }
 
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
 /* Special */
 
 .visuallyhidden:not(:focus):not(:active) {
@@ -68,7 +72,7 @@ a {
 
   /* Links */
 
-a ([href]):hover,
+a:hover,
 a:focus,
 a:active{
     color: var(--accent-light-color);
@@ -142,7 +146,12 @@ a:active{
     padding-left: 21px;
     text-align: left;
     border-radius: 0;
+
+
+    /* todo display: block !  */
 }
+
+
 
 .main-navigation__subitem:first-child a{
     font-weight: 700;
@@ -200,15 +209,13 @@ a:active{
     font-weight: 700;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: row;
 }
 
 .product__blocks strong{
     font-size: 35px;
     line-height: 41px;
-    margin: 16px;
-}
-
-.product__blocks p{
     margin: 16px;
 }
 
@@ -237,12 +244,20 @@ a:active{
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .product__catalog h3{
     text-decoration: underline;
     text-decoration-color: rgba(255, 255, 255, 0.2);
     text-decoration-skip-ink: none;
+}
+
+.catalog-item {
+    width: 293px;
+    text-align: center;
 }
 
 .catalog-item img{
@@ -265,6 +280,14 @@ a:active{
     display: inline-block;
 }
 
+.hit::before{
+    content: " ";
+    width: 61px;
+    height: 61px;
+    display: inline-block;
+    background-image: url(/img/svg/hit.svg);
+}
+
 /* About  */
 
 .about{
@@ -275,12 +298,15 @@ a:active{
     background-repeat: repeat;
     color: var(--basic-dark-text-color);
     border-radius: 16px;
+    margin-top: 40px;
 }
 
 .about p {
     font-weight: 500;
     font-size: 24px;
     line-height: 30px;
+    padding: 24px;
+    margin: 0;
 }
 
 .about ul{
@@ -321,25 +347,44 @@ a:active{
     background-image: url(/img/strawberry_background.jpg);
     background-repeat: no-repeat;
     border-radius: 16px;
+    margin-top: 40px;
 }
+
+.blog-article p {
+    padding-top: 23px;
+    padding-left: 20px;
+}
+
 .blog-article h2 {
     color: var(--basic-dark-text-color);
     font-size: 24px;
+    padding-left: 20px;
     text-decoration: underline;
     text-decoration-color: var(--blog-link-underline);
     text-decoration-skip-ink: none;
 }
 
 /* Subscription form  */
-
-.subscription {
+.subscription-container{
     width: 560px;
     height: 220px;
+    margin-top: 40px;
+    margin-left: 26px;
+    background-image: url(/img/svg/bg-post.svg);
+}
+
+.subscription {
+    width: 548px;
+    height: 210px;
     background-color: var(--form-background-color);
     color: var(--basic-dark-text-color);
     border-radius: 16px;
 }
 
+.blog-subscription-container{
+    display: flex;
+    font-display: row;
+}
 /* Address   */
 
 .address-container {
@@ -366,6 +411,17 @@ a:active{
 }
 
 /* Footer */
+footer{
+    margin-top: 30px;
+}
+
+footer::before{
+    content: " ";
+    width: 1146px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: block;
+}
 
 .socials li{
     list-style: none;
@@ -391,9 +447,88 @@ a:active{
     border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
-.search-form, .login-form, .cart, .feedback_form {
+/* Footer info */
+.info li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.info li a{
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.2);
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 1px;
+}
+
+.info li > b{
+    font-weight: 700;
+} 
+
+.info li > b::before{
+    content: " ";
+    width: 15px;
+    height: 13px;
+    background-image: url(/img/svg/heart.svg);
+    display: inline-block;
+}
+
+.copyright{
+    font-size: 12px;
+}
+
+.copyright a {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.2);
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 1px;
+}
+
+
+
+/* CATALOG PAGE  */
+
+.breadcrumbs li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.pagination li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pagination__previous,
+.pagination__next{
+    width: 7px;
+    height: 12px;
+}
+.pagination__previous{
+    background-image: url(/img/svg/icon-left-small.svg);
+}
+
+.pagination__next{
+    background-image: url(/img/svg/icon-right-small.svg);
+}
+
+.pagination {
+    margin-top: 87px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.search-form, .login-form, .cart, .feedback_form, .filters, .slide-2, .slide-3 {
     display: none; 
-    /* временно спрятала до следующего домашнего задания */
+    /* временно спрятано до следующего домашнего задания */
 }
 
 /* todo: all colors and gradients to vars */

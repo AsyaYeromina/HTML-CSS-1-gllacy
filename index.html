@@ -138,7 +138,7 @@
             <a href="">
               <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             </a>
-            <a href="">
+            <a class="hit" href="">
               <img src="img/icecream1.jpg" width="267" height="267" alt="Фотография мороженого">
               <span class="visuallyhidden">Хит продаж</span>
             </a>
@@ -149,7 +149,7 @@
             <a href="">
               <h3>Сливочно-кофейное с кусочками шоколада</h3>
             </a>
-            <a href="">
+            <a class="hit" href="">
               <img src="img/icecream2.jpg" width="267" height="267" alt="Фотография мороженого">
               <span class="visuallyhidden">Хит продаж</span>
             </a>
@@ -160,7 +160,7 @@
             <a href="">
               <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
             </a>
-            <a href="">
+            <a class="hit" href="">
               <img src="img/icecream3.jpg" width="267" height="267" alt="Фотография мороженого">
               <span class="visuallyhidden">Хит продаж</span>
             </a>
@@ -171,7 +171,7 @@
             <a href="">
               <h3>Сливочное крем-брюле с карамельной подливкой</h3>
             </a>
-            <a href="">
+            <a class="hit" href="">
               <img src="img/icecream4.jpg" width="267" height="267" alt="Фотография мороженого">
               <span class="visuallyhidden">Хит продаж</span>
             </a>
@@ -195,21 +195,24 @@
       </section>
       
       <!-- BLOG ARTICLE -->
-      <article class="blog-article">
-        <p>Новое в нашем блоге</p>
-        <a href="">
-          <h2>10 способов сервировки фруктовых щербетов к столу</h2>
-        </a>
-      </article>
-      
-      <!-- SUBSCRIPTION  -->
-      <form class="subscription" action="https://echo.htmlacademy.ru/courses" method="get">
-        <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <input type="email" id="subscription-form" placeholder="email@example.com">
-        <label for="subscription-form" class="visuallyhidden">Введите свой email</label>
-        <button type="submit" class="button">Отправить</button>
-      </form>
-      
+      <div class="blog-subscription-container">
+        <article class="blog-article">
+          <p>Новое в нашем блоге</p>
+          <a href="">
+            <h2>10 способов сервировки <br> фруктовых щербетов к <br>столу</h2>
+          </a>
+        </article>
+        
+        <!-- SUBSCRIPTION  -->
+        <div class="subscription-container">
+          <form class="subscription" action="https://echo.htmlacademy.ru/courses" method="get">
+            <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <input type="email" id="subscription-form" placeholder="email@example.com">
+            <label for="subscription-form" class="visuallyhidden">Введите свой email</label>
+            <button type="submit" class="button">Отправить</button>
+          </form>
+        </div>
+      </div>
       <!-- MAP -->
       <section class="address">
         <h2 class="visuallyhidden">Контакты</h2>
@@ -275,7 +278,7 @@
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt=" Доготип HTML Academy">
       </a>
-      <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсив по верстке, уровень 1">HTML Academy</a>&copy;2019</p>
+      <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсив по верстке, уровень 1">HTML Academy </a>&copy; 2019</p>
     </footer>
 
   <!-- FEEDBACK FORM (modal window)-->
