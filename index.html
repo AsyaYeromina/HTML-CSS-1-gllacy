@@ -8,7 +8,10 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
   <body>
-    <header>
+
+    <!-- HEADER  -->
+
+    <header class="header-container">
       <img src="img/svg/logo.svg" width="154" height="64" alt="Логотип Gllacy shop" class="logo">
       <nav>
         <ul class="main-navigation">
@@ -29,15 +32,21 @@
 
       <!-- FORMS -->
       <div class="user-navigation">
-        <a href="" aria-label="Поиск">
+        <a class="user-navigation__button search-button" href="" aria-label="Поиск">
           <span class="visuallyhidden">Искать</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+            <path d="M16.96 15.53l-5.21-5.21A6.46 6.46 0 0013 6.5 6.5 6.5 0 106.5 13a6.46 6.46 0 003.84-1.26l5.2 5.2 1.42-1.41zM6.5 11a4.5 4.5 0 11.01-9.01A4.5 4.5 0 016.5 11z"/>
+          </svg>
         </a>
         <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="get">
           <label class="visuallyhidden" for="search">Поиск по сайту</label>
           <input type="search" id="search" name="search">
         </form>
 
-        <a href="">Вход</a>
+        <a class="user-navigation__button login-button" href="">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"><path d="M6 14.88l6.92-5.38L6 4.12v2.92H-.04v4.92H6z"/><path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13a2 2 0 002-2V2a2 2 0 00-2-2z"/></svg>
+          <span>Вход</span>
+        </a>
         <form class="login-form" action="https://echo.htmlacademy.ru/courses" method="get">
           <p>
             <label class="visuallyhidden" for="login-email">Введите e-mail</label>
@@ -52,7 +61,7 @@
           <a href="" aria-label="Страница регистрации">Новая регистрация</a>
         </form>
 
-        <a class="cart-empty">
+        <a class="user-navigation__button cart-empty-button">
           <span>Пусто</span>
         </a>
         <a href="" class="cart-full">
@@ -84,6 +93,10 @@
       <p class="short-info">с 10 до 20, ежедневно<br><a href="tel:88124502525">8 812 450-25-25</a></p>
       
     </header>
+
+
+    <!-- MAIN  -->
+
     <main>
       <h1 class="visuallyhidden">Gllacy shop - Магазин мороженого</h1>
 
@@ -212,6 +225,7 @@
           </form>
         </div>
       </div>
+
       <!-- MAP -->
       <section class="address">
         <h2 class="visuallyhidden">Контакты</h2>
@@ -230,6 +244,10 @@
         <a href="" class="button">Форма обратной связи</a>
       </section>
     </main>
+
+    
+    <!-- FOOTER  -->
+
     <footer>
       <ul class="socials">
         <li>
@@ -268,14 +286,14 @@
           </a>
         </li>
       </ul>
-      <ul class="info">
+      <ul class="footer-info">
         <li><b><a href="">Для поставщиков</a></b></li>
         <li><a href="">О производстве</a></li>
         <li><a href="">Наши документы</a></li>
         <li><a href="">Экологические стандарты</a></li>
       </ul>
       <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt=" Доготип HTML Academy">
+        <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt=" Логотип HTML Academy">
       </a>
       <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсив по верстке, уровень 1">HTML Academy </a>&copy; 2019</p>
     </footer>
