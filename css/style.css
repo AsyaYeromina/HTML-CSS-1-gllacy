@@ -249,6 +249,10 @@ a.current-nav{
     color: var(--basic-dark-text-color);
 }
 
+.cart-full:hover{
+    color: var(--basic-dark-text-color);
+}
+
 .cart-full::before{
     content: " ";
     background-image: url(img/svg/basket-red.svg);
