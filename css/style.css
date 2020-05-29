@@ -308,7 +308,7 @@ a.current-nav{
 
 .product__blocks li:first-child{
     background-color: var(--first-banner-background);
-    background-image: url(img/raspberry_background.jpg);
+    background-image: url(../img/raspberry_background.jpg);
 }
 
 .product__blocks li:last-child{
