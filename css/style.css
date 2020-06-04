@@ -40,9 +40,11 @@
     --social-icon-border: rgba(255, 255, 255, 0.4);
     --social-icon-fill-active: rgba(255, 255, 255, 0.6);
     --subnav-border: rgba(50, 50, 50, 0.2);
+    --input-outline-border: rgba(255, 255, 255, 0.4);
+
 }
 
-/* Global */
+/* Global styles */
 body{
     min-width: 1200px;
     margin: 0;
@@ -67,7 +69,6 @@ a{
 }
 
 /* Special */
-
 .visuallyhidden:not(:focus):not(:active){
     position: absolute;
     width: 1px;
@@ -82,7 +83,6 @@ a{
   }
 
   /* Links */
-
 a:hover,
 a:focus,
 a:active{
@@ -90,7 +90,6 @@ a:active{
 }
 
 /* Buttons */
-
 .button{
     background: linear-gradient(var(--button-light-color), var(--button-dark-color));
     padding: 15px 22px 16px 22px;
@@ -138,7 +137,6 @@ a:active{
 }
 
 /* Navigation */
-
 .logo{
     margin-right: 24px;
 }
@@ -176,6 +174,7 @@ a:active{
     box-shadow: inset 0px 2px 1px var(--nav-button-active-box-shadow);
 }
 
+/* Navigation parent item of active submenu item  */
 .current-nav{
     background-color: var(--nav-dark-color);
     color: var(--basic-white);
@@ -187,7 +186,6 @@ a.current-nav{
 }
 
 /* submenu  */
-
 .main-navigation__sub{
     background-color: var(--basic-white);
     box-shadow: 0px 20px 20px var(--subnavigation-box-shadow);
@@ -210,6 +208,7 @@ a.current-nav{
     border-bottom-right-radius: 4px;
 }
 
+/* submenu items conditions */
 .main-navigation__subitem > a{
     text-decoration: none;
     background-color: var(--basic-white);
@@ -258,7 +257,6 @@ a.current-nav{
 }
 
 /* hiding submenu  */
-
 .main-navigation__item{
     position: relative;
     margin-right: 32px;
@@ -281,7 +279,6 @@ a.current-nav{
 }
 
 /* user navigation  */
-
 .user-navigation__button{
     background-color: var(--user-nav-background);
     border-radius: 26px;
@@ -338,8 +335,9 @@ a.current-nav{
 .short-info a{
     font-size: 22px;
 }
-/* Slider */
 
+
+/* Slider */
 .slider{
     list-style: none;
     margin: 0;
@@ -352,7 +350,7 @@ a.current-nav{
     font-weight: 700;
 }
 
-/* Banners */
+/* Product banners */
 .product__blocks{
     list-style: none;
     font-size: 18px;
@@ -441,8 +439,7 @@ a.current-nav{
     background-image: url(../img/svg/hit.svg);
 }
 
-/* About  */
-
+/* About section */
 .about{
     width: 1146px;
     height: 306px;
@@ -491,7 +488,6 @@ a.current-nav{
 }
 
 /* Blog article  */
-
 .blog-article{
     width: 560px;
     color: var(--basic-dark-text-color);
@@ -535,8 +531,8 @@ a.current-nav{
     display: flex;
     flex-direction: row;
 }
-/* Address   */
 
+/* Address and map section */
 .address-container{
     width: 303px;
     background-color: var(--basic-white);
@@ -564,6 +560,7 @@ footer{
     margin-top: 30px;
 }
 
+/* line before footer  */
 footer::before{
     content: " ";
     width: 1146px;
@@ -572,6 +569,7 @@ footer::before{
     display: block;
 }
 
+/* socisls icons in footer  */
 .socials li{
     list-style: none;
     display: inline-block;
@@ -595,7 +593,7 @@ footer::before{
     border: 2px solid var(--social-icon-fill-active);
 }
 
-/* Footer info */
+/* Footer info links*/
 .footer-info li{
     list-style: none;
     margin: 0;
@@ -627,6 +625,7 @@ footer::before{
     display: inline-block;
 }
 
+/* dev links in footer  */
 .copyright{
     font-size: 12px;
 }
@@ -646,11 +645,22 @@ footer::before{
 
 /* !CATALOG PAGE  */
 
-.breadcrumbs li{
-    list-style: none;
+
+
+/* breadcrumbs  */
+.breadcrumbs{
+    margin-bottom: 10px;
+    margin-top: 28px;
+}
+
+.breadcrumbs ol{
     margin: 0;
     padding: 0;
-    display: inline;
+}
+
+.breadcrumbs li{
+    list-style: none;
+    display: inline-block;
 }
 
 .breadcrumbs a{
@@ -664,15 +674,24 @@ footer::before{
 text-decoration-color: var(--accent-light-color-underline);
 }
 
-/* FILTERS  */
+/* h1 of catalog page  */
+.catalog-page-heading{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+}
 
+
+
+/* FILTERS  */
+/* all filters styles  */
 .fieldset{
     border: none;
     padding: 0;
     margin: 0;
 }
 
-.filters-fieldset{
+.filters-fieldset-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -698,15 +717,22 @@ text-decoration-color: var(--accent-light-color-underline);
     border-radius: 20px;
 }
 
+/* sort filter (select) */
 .sort-wrapper select{
     border: none;
     background-color: var(--user-nav-background);
     padding: 13px 16px 10px 16px;
     color: var(--basic-white);
+    font-weight: 500;
     border-radius: 20px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+
+.sort-wrapper select:hover{
+    color: var(--basic-dark-text-color)
+
 }
 
 .sort-wrapper select::after{
@@ -718,31 +744,62 @@ text-decoration-color: var(--accent-light-color-underline);
     margin-left: 26px;
 }
 
-/* todo: не отображается  стрелка у селекта  */
-
-.filter-button{
-    border: none;
-    color: var(--basic-white);
-    display: inline-block;
-    align-self: flex-end;
-    margin-bottom: 14px;
-    border: 2px solid var(--basic-white);
-    font-size: 16px;
-    font-weight: 500;
-    padding: 14px 29px 9px 29px;
+/* range filfer  */
+/* скрытие  */
+.range-field{
+    -webkit-appearance: none;
+    width: 180px;
+    height: 22px;
+    padding: 10px 20px 10px 20px;
+    background-image: url(../img/svg/range-filter-line-thumb.svg);
+    background-size: 180px 22px;
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
- 
+
+/* кастомизация ползунка  */
+.range-field::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 22px;
+    background-image: url(../img/svg/filter-button.svg);
+    background-repeat: no-repeat;
+    background-size: 18px 20px;
+    cursor: pointer;
+    transition: 0,5s;
+    transform: translateY(2px);
+}
+
+.range-field::-webkit-slider-thumb:hover,
+.range-field::-webkit-slider-thumb:active,
+.range-field::-moz-range-thumb:hover,
+.range-field::-moz-range-thumb:active{
+    width: 22px;
+    height: 25px;
+    background-size: 20px 22px;
+}
+
+/* radiobuttons filter  */
+.radiobuttons-field{
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+/* checkbox filter  */
 .checkbox-field {
     list-style: none;
     margin-top: 0;
     display: flex;
 }
 
-
 .checkbox-field input{
     background: transparent;
     border: 0;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     outline: 0;
     position: absolute;
     top: 50%;
@@ -753,8 +810,8 @@ text-decoration-color: var(--accent-light-color-underline);
 /* outline for lable of checkbox  */
 .checkbox-field input[type="checkbox"]:focus + label{
     outline: 0;
-    border: 1px solid #fff;
-    border-radius: 5px;
+    border: 1px solid var(--input-outline-border);
+    border-radius: 20px;
 }
 
 .checkbox-field__item {
@@ -763,11 +820,10 @@ text-decoration-color: var(--accent-light-color-underline);
     margin-right: 15px;
 }
 
-
 .checkbox-field label{
     align-items: center;
     user-select: none;
-    padding: 5px 10px 5px 35px;
+    padding: 5px 0 5px 40px;
     display: block;
     border: 1px solid transparent;
 }
@@ -810,6 +866,20 @@ text-decoration-color: var(--accent-light-color-underline);
     opacity: 0.2;
 }
 
+
+.filter-button{
+    border: none;
+    color: var(--basic-white);
+    display: inline-block;
+    align-self: flex-end;
+    margin-bottom: 14px;
+    margin-right: 15px;
+    border: 2px solid var(--basic-white);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 29px 10px 29px;
+    border-radius: 24px;
+}
 
 /* CATALOG  */
 
