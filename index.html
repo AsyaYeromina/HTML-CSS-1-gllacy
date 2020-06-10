@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body class="page">
+  <body class="page page-1">
 
     <!-- HEADER / MAIN NAVIGATION -->
     <header class="header-container width-container">
@@ -60,10 +60,10 @@
               <a href="" aria-label="Страница регистрации">Новая регистрация</a>
             </form>
 
-            <a class="user-navigation__button cart-empty-button">
+            <a class="user-navigation__button cart-empty-button cart-button cart-button-active">
               <span>Пусто</span>
             </a>
-            <a href="" class="cart-full">
+            <a href="" class="user-navigation__button cart-full cart-button">
               <span>2 товара</span>
             </a>
             <form class="cart" action="https://echo.htmlacademy.ru/courses" method="get">
@@ -122,16 +122,10 @@
               <img class="slide__img" src="img/icecream-slider-3.png" width="647" height="584" alt="Две мороженки. Пломбир с помадкой и клубничный щербет">
               <a class="slide__button button" href="">Давайте оба!</a>
             </li>
-            <div class="slider-switcher">
-              <button type="button">
-                <span class="visuallyhidden">Первый слайд</span>
-              </button>
-              <button type="button">
-                <span class="visuallyhidden">Второй слайд</span>
-              </button>
-              <button type="button">
-                <span class="visuallyhidden">Третий слайд</span>
-              </button>
+            <div class="slide-switcher">
+              <button class="slide-switcher__button current-slide-button" type="button" aria-label="Первый слайд"></button>
+              <button class="slide-switcher__button" type="button" aria-label="Второй слайд"></button>
+              <button class="slide-switcher__button" type="button" aria-label="Третий слайд"></button>
             </div>
           </ol>
 

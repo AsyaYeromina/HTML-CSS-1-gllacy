@@ -33,65 +33,65 @@
         </ul>
 
       <!-- FORMS / USER NAVIGATION -->
-        <div class="user-navigation">
-          <a class="user-navigation__button search-button" href="" aria-label="Поиск">
-            <span class="visuallyhidden">Искать</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
-              <path d="M16.96 15.53l-5.21-5.21A6.46 6.46 0 0013 6.5 6.5 6.5 0 106.5 13a6.46 6.46 0 003.84-1.26l5.2 5.2 1.42-1.41zM6.5 11a4.5 4.5 0 11.01-9.01A4.5 4.5 0 016.5 11z"/>
-            </svg>
-          </a>
-          <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="get">
-            <label class="visuallyhidden" for="search">Поиск по сайту</label>
-            <input type="search" id="search" name="search">
-          </form>
+      <div class="user-navigation">
+        <a class="user-navigation__button search-button" href="" aria-label="Поиск">
+          <span class="visuallyhidden">Искать</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+            <path d="M16.96 15.53l-5.21-5.21A6.46 6.46 0 0013 6.5 6.5 6.5 0 106.5 13a6.46 6.46 0 003.84-1.26l5.2 5.2 1.42-1.41zM6.5 11a4.5 4.5 0 11.01-9.01A4.5 4.5 0 016.5 11z"/>
+          </svg>
+        </a>
+        <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="get">
+          <label class="visuallyhidden" for="search">Поиск по сайту</label>
+          <input type="search" id="search" name="search">
+        </form>
 
-          <a class="user-navigation__button login-button" href="">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"><path d="M6 14.88l6.92-5.38L6 4.12v2.92H-.04v4.92H6z"/><path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13a2 2 0 002-2V2a2 2 0 00-2-2z"/></svg>
-            <span>Вход</span>
-          </a>
-          <form class="login-form" action="https://echo.htmlacademy.ru/courses" method="get">
-            <p>
-              <label class="visuallyhidden" for="login-email">Введите e-mail</label>
-              <input type="email" id="login-email" name="email" required>
-            </p>
-            <p>
-              <label class="visuallyhidden" for="password">Введите пароль</label>
-              <input type="password" id="password" name="password" required>
-            </p>
-            <button class="button" type="submit">Войти</button>
-            <a href="" aria-label="Страница востановления пароля">Забыли пароль?</a>
-            <a href="" aria-label="Страница регистрации">Новая регистрация</a>
-          </form>
+        <a class="user-navigation__button login-button" href="">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"><path d="M6 14.88l6.92-5.38L6 4.12v2.92H-.04v4.92H6z"/><path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13a2 2 0 002-2V2a2 2 0 00-2-2z"/></svg>
+          <span>Вход</span>
+        </a>
+        <form class="login-form" action="https://echo.htmlacademy.ru/courses" method="get">
+          <p>
+            <label class="visuallyhidden" for="login-email">Введите e-mail</label>
+            <input type="email" id="login-email" name="email" required>
+          </p>
+          <p>
+            <label class="visuallyhidden" for="password">Введите пароль</label>
+            <input type="password" id="password" name="password" required>
+          </p>
+          <button class="button" type="submit">Войти</button>
+          <a href="" aria-label="Страница востановления пароля">Забыли пароль?</a>
+          <a href="" aria-label="Страница регистрации">Новая регистрация</a>
+        </form>
 
-          <a class="user-navigation__button cart-empty-button">
-            <span>Пусто</span>
-          </a>
-          <a href="" class="cart-full">
-            <span>2 товара</span>
-          </a>
-          <form class="cart" action="https://echo.htmlacademy.ru/courses" method="get">
-            <ul class="order-list">
-              <li>
-                <a href="">
-                  <span class="visuallyhidden">Удалить</span>
-                </a>
-                <a href="" aria-label="Пломбир с апельсиновым джемом"></a>
-                <p>1,5 кг&#215;<span>200 руб.</span></p>
-                <p>300 руб.</p>
-              </li>
-              <li>
-                <a href="">
-                  <span class="visuallyhidden">Удалить</span>
-                </a>
-                <a href="" aria-label="Клубничный пломбир с присыпкой из белого шоколада"></a>
-                <p>1,5 кг&#215;<span>300 руб.</span></p>
-                <p>450 руб.</p>
-              </li>
-            </ul>
-            <p>Итого: 750 руб.</p>
-            <button class="button" type="submit">Оформить заказ</button>
-          </form>
-        </div>
+        <a class="user-navigation__button cart-empty-button cart-button cart-button-active">
+          <span>Пусто</span>
+        </a>
+        <a href="" class="user-navigation__button cart-full cart-button">
+          <span>2 товара</span>
+        </a>
+        <form class="cart" action="https://echo.htmlacademy.ru/courses" method="get">
+          <ul class="order-list">
+            <li>
+              <a href="">
+                <span class="visuallyhidden">Удалить</span>
+              </a>
+              <a href="" aria-label="Пломбир с апельсиновым джемом"></a>
+              <p>1,5 кг&#215;<span>200 руб.</span></p>
+              <p>300 руб.</p>
+            </li>
+            <li>
+              <a href="">
+                <span class="visuallyhidden">Удалить</span>
+              </a>
+              <a href="" aria-label="Клубничный пломбир с присыпкой из белого шоколада"></a>
+              <p>1,5 кг&#215;<span>300 руб.</span></p>
+              <p>450 руб.</p>
+            </li>
+          </ul>
+          <p>Итого: 750 руб.</p>
+          <button class="button" type="submit">Оформить заказ</button>
+        </form>
+      </div>
       </div>
       </nav>
       <p class="short-info">с 10 до 20, ежедневно<br><a href="tel:88124502525">8 812 450-25-25</a></p>
@@ -144,19 +144,19 @@
             <legend class="filter-name">Жирность</legend>
             <div class="radiobuttons-wrapper">
               <ul class="radiobuttons-field">
-                <li class="radiobuttons-field__item">
+                <li class="radiobuttons-field__item field__item">
                   <input type="radio" id="fat-0" name="fat" value="0%" class="filter-input-radio visuallyhidden">
                   <label tabindex="0" for="fat-0">0%</label>
                 </li>
-                <li class="radiobuttons-field__item">
+                <li class="radiobuttons-field__item field__item">
                   <input type="radio" id="fat-10" name="fat" value="до 10%" class="filter-input-radio visuallyhidden" checked>
                   <label tabindex="0" for="fat-10">до 10%</label>
                 </li>
-                <li class="radiobuttons-field__item">
+                <li class="radiobuttons-field__item field__item">
                   <input type="radio" id="fat-30" name="fat" value="до 30%" class="filter-input-radio visuallyhidden">
                   <label tabindex="0" for="fat-30">до 30%</label>
                 </li>
-                <li class="radiobuttons-field__item">
+                <li class="radiobuttons-field__item field__item">
                   <input type="radio" id="fat-31" name="fat" value="выше 30%" class="filter-input-radio visuallyhidden">
                   <label tabindex="0" for="fat-31">выше 30%</label>
                 </li>
@@ -168,23 +168,23 @@
             <div class="checkbox-wrapper">
               <legend class="filter-name">Наполнители:</legend>
               <ul class="checkbox-field">
-                <li class="checkbox-field__item">
+                <li class="checkbox-field__item field__item">
                   <input id="chokolate-id" type="checkbox" name="chokolate" class="filter-input-checkbox visuallyhidden" checked>
                   <label for="chokolate-id">шоколадные</label>
                 </li>
-                <li class="checkbox-field__item">
+                <li class="checkbox-field__item field__item">
                   <input id="sugar-id" type="checkbox" name="sugar" class="filter-input-checkbox visuallyhidden" checked>
                   <label for="sugar-id">сахарные присыпки</label>
                 </li>
-                <li class="checkbox-field__item">
+                <li class="checkbox-field__item field__item">
                   <input id="fruits-id" type="checkbox" name="fruits" class="filter-input-checkbox visuallyhidden">
                   <label for="fruits-id">фрукты</label>
                 </li>
-                <li class="checkbox-field__item">
+                <li class="checkbox-field__item field__item">
                   <input id="syrups-id" type="checkbox" name="syrups" class="filter-input-checkbox visuallyhidden">
                   <label for="syrups-id">сиропы</label>
                 </li>
-                <li class="checkbox-field__item">
+                <li class="checkbox-field__item field__item">
                   <input id="jams-id" type="checkbox" name="jams" class="filter-input-checkbox visuallyhidden">
                   <label for="jams-id">джемы</label>
                 </li>
@@ -247,7 +247,7 @@
           </li>
           <li class="catalog-item">
             <a class="catalog-item__link" href="">
-              <h3 class="catalog-item__name">Сливочное с брусничным джемом</h3>
+              <h3 class="catalog-item__name">Сливочное с&nbsp;брусничным джемом</h3>
             </a>
             <a href="">
               <img class="catalog-item__img" src="img/icecream5.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
@@ -257,7 +257,7 @@
           </li>
           <li class="catalog-item">
             <a class="catalog-item__link" href="">
-              <h3 class="catalog-item__name">Сливочно-черничное с цельными ягодами черники</h3>
+              <h3 class="catalog-item__name">Сливочно-черничное с&nbsp;цельными ягодами черники</h3>
             </a>
             <a href="">
               <img class="catalog-item__img" src="img/icecream6.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
@@ -267,7 +267,7 @@
           </li>
           <li class="catalog-item">
             <a class="catalog-item__link" href="">
-              <h3 class="catalog-item__name">Сливочно-лимонное с карамельной присыпкой</h3>
+              <h3 class="catalog-item__name">Сливочно-лимонное с&nbsp;карамельной присыпкой</h3>
             </a>
             <a href="">
               <img class="catalog-item__img" src="img/icecream7.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
@@ -277,7 +277,7 @@
           </li>
           <li class="catalog-item">
             <a class="catalog-item__link" href="">
-              <h3 class="catalog-item__name">Сливочное с шоколадной стружкой</h3>
+              <h3 class="catalog-item__name">Сливочное с&nbsp;шоколадной стружкой</h3>
             </a>
             <a href="">
               <img class="catalog-item__img" src="img/icecream8.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
@@ -287,7 +287,7 @@
           </li>
           <li class="catalog-item">
             <a class="catalog-item__link" href="">
-              <h3 class="catalog-item__name">Сливочно-ванильное с кусочками шоколада</h3>
+              <h3 class="catalog-item__name">Сливочно-ванильное с&nbsp;кусочками шоколада</h3>
             </a>
             <a href="">
               <img class="catalog-item__img" src="img/icecream9.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
@@ -297,7 +297,7 @@
           </li>
           <li class="catalog-item">
             <a class="catalog-item__link" href="">
-              <h3 class="catalog-item__name">Сливочноe с ментоловым сиропом</h3>
+              <h3 class="catalog-item__name">Сливочноe с&nbsp;ментоловым сиропом</h3>
             </a>
             <a href="">
               <img class="catalog-item__img" src="img/icecream10.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
@@ -307,7 +307,7 @@
           </li>
           <li class="catalog-item">
             <a class="catalog-item__link" href="">
-              <h3 class="catalog-item__name">Сливочное с кусочками черного шоколада</h3>
+              <h3 class="catalog-item__name">Сливочное с&nbsp;кусочками черного шоколада</h3>
             </a>
             <a href="">
               <img class="catalog-item__img" src="img/icecream11.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">
@@ -317,7 +317,7 @@
           </li>
           <li class="catalog-item">
             <a class="catalog-item__link" href="">
-              <h3 class="catalog-item__name">Сливочное с мятным сиропом</h3>
+              <h3 class="catalog-item__name">Сливочное с&nbsp;мятным сиропом</h3>
             </a>
             <a href="">
               <img src="img/icecream12.jpg" width="267" height="267" alt="Фотография мороженого" class="catalog-item__img">

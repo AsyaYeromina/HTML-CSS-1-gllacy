@@ -315,14 +315,30 @@ a:active{
     background-color: var(--user-nav-background);
     border-radius: 26px;
     margin-right: 10px;
+    padding-bottom: 8px;
+    padding-top: 6px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .user-navigation__button:last-child{
     margin-right: 0;
 }
 
-.cart-empty-button{
+.cart-button{
+    display: none;
+}
+
+.cart-button-active{
+    display: block;
+}
+
+.cart-empty-button,
+.cart-full{
     margin-right: 0;
+    padding-left: 45px;
+    padding-top: 8px;
+    position: relative;
 }
 
 .search-button:hover,
@@ -337,12 +353,6 @@ a:active{
     color: var(--basic-white);
 }
 
-.user-navigation__button{
-    padding-bottom: 8px;
-    padding-top: 6px;
-    padding-right: 20px;
-    padding-left: 20px;
-}
 
 .search-button {
     padding-bottom: 9px;
@@ -371,16 +381,13 @@ a:active{
     background-image: url(../img/svg/basket.svg);
     width: 21px;
     height: 20px;
-    display: inline-block;
-    transform: translateY(4px);
+    position: absolute;
+    left: 15px;
 }
 
 .cart-full{
     color: var(--basic-dark-text-color);
-}
-
-.cart-full:hover{
-    color: var(--basic-dark-text-color);
+    background-color: var(--basic-white);
 }
 
 .cart-full::before{
@@ -388,8 +395,8 @@ a:active{
     background-image: url(../img/svg/basket-red.svg);
     width: 21px;
     height: 20px;
-    display: inline-block;
-    transform: translateY(4px);
+    position: absolute;
+    left: 15px;
 }
 
 .short-info{
@@ -431,8 +438,6 @@ html{
 .product__catalog{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 26px;
-    row-gap: 40px;
 }
 
 /* OTHER STYLES FOR EACH SECTION  */
@@ -450,6 +455,14 @@ html{
     min-height: 524px;
 }
 
+.slide{
+    display: none;
+}
+
+.slide-current{
+    display: block;
+}
+
 .slide__title{
     font-size: 60px;
     line-height: 1;
@@ -462,7 +475,7 @@ html{
 .slide__img{
     position: absolute;
     z-index: -2;
-    transform: translateY(-500px);
+    top: 10px;
 }
 
 .slide__button{
@@ -471,15 +484,49 @@ html{
     text-align: center;
     border-radius: 70px;
     margin: 0 auto;
-    width: fit-content;
     width: -moz-fit-content;
+    width: fit-content;
     padding: 20px 40px 20px 40px;
 }
 
-.slider-switcher{
+
+.slide-switcher{
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 20px;
+    z-index: 20;
+    display: flex;
+    width: 67px;
+    justify-content: space-between;
+}
+
+.slide-switcher__button{
+    padding: 0;
+    width: 17px;
+    height: 17px;
+    background-color: transparent;
+    border: 2px solid var(--basic-white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slide-switcher__button:hover{
+    background-color: var(--social-icon-border);
+}
+.current-slide-button{
+    background-color: var(--basic-white);
+}
+
+.page-1{
+    background-color: var(--main-background1);
+}
+
+.page-2{
+    background-color: var(--main-background2);
+}
+
+.page-3{
+    background-color: var(--main-background3);
 }
 
 /* Product banners */
@@ -546,6 +593,11 @@ html{
     margin: 0;
     padding: 0;
     margin-bottom: 40px;
+    position: relative;
+}
+
+.product__catalog * {
+    box-sizing: border-box;
 }
 
 .catalog-page-main .product__catalog{
@@ -553,19 +605,32 @@ html{
 }
 
 .catalog-item{
-    width: 267px;
     text-align: center;
     display: flex;
     flex-direction: column;
     position: relative;
-}
-
-.catalog-item:hover{
-    background-color: var(--user-nav-background);
     padding-top: 6px;
     padding-left: 13px;
     padding-right: 13px;
-    padding-bottom: 75px;
+    padding-bottom: 6px;
+    position: relative;
+}
+
+.catalog-item:hover::before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-color: var(--user-nav-background);
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding-bottom: 40px;
+}
+
+.catalog-item:hover{
+    z-index: 2;
 }
 
 .catalog-item__link{
@@ -585,13 +650,14 @@ html{
     font-weight: 400;
     font-size: 16px;
     margin: 0 auto;
-    margin-bottom: 14px;
-
+    min-height: 88px;
 }
+
 
 .catalog-item__img{
     border-radius: 50%;
-    margin-bottom: 12px;
+    margin-bottom: 17px;
+    display: block;
 }
 
 .catalog-item__prise{
@@ -599,7 +665,7 @@ html{
     font-weight: 700;
     margin: 0;
     position: absolute;
-    transform: translateY(220px);
+    top: 220px;
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
@@ -619,26 +685,23 @@ html{
     content: " ";
     width: 61px;
     height: 61px;
-    display: inline-block;
     background-image: url(../img/svg/hit.svg);
     position: absolute;
+    top: 6px;
+    left: 6px;
 }
 
 .catalog-item__button{
-    order: 3;
-    display: block;
+    width: -moz-fit-content;
     width: fit-content;
     align-self: center;
-    width: -moz-fit-content;
-    /* display: none; */
+    display: none;
     position: absolute;
-    top: 350px;
-    z-index: 2;
+    bottom: -20px;
 }
 
 .catalog-item:hover .catalog-item__button{
     display: block;
-
 }
 
 /* About section */
@@ -677,6 +740,7 @@ html{
 
 .about__feature-item{
     margin-left: 55px;
+    position: relative;
 }
 
 .about__feature-item::before{
@@ -686,7 +750,8 @@ html{
     width: 49px;
     height: 49px;
     position: absolute;
-    transform: translate(-55px, -10px);
+    top: -6px;
+    left: -55px;
 }
 
 .about__feature-item:nth-child(2)::before{
@@ -954,12 +1019,10 @@ html{
     height: 13px;
     background-image: url(../img/svg/heart.svg);
     display: inline-block;
-    background-size: 14px;
     background-repeat: no-repeat;
     position: absolute;
     top: 5px;
-    left: -5px;
-    transform: translateX(-100%);
+    left: -20px;
 }
 
 /* dev links in footer  */
@@ -1155,9 +1218,9 @@ text-decoration-color: var(--accent-light-color-underline);
     transform: translateY(-10px);
 }
 
-
-/* radiobuttons filter  */
-.radiobuttons-field{
+/* radio and checkbox items  */
+.radiobuttons-field,
+.checkbox-field{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -1165,27 +1228,39 @@ text-decoration-color: var(--accent-light-color-underline);
     margin: 0;
 }
 
-.radiobuttons-field__item{
-    padding-left: 20px;
-    padding-right: 20px;
+.field__item{
+    padding-left: 28px;
+    padding-right: 28px;
+    position: relative;
 }
 
-.radiobuttons-field label{
+.field__item:first-child{
+    padding-left: 40px;
+}
+
+.field__item:last-child{
+    padding-right: 0;
+}
+
+.radiobuttons-field label,
+.checkbox-field label{
     cursor: pointer;
     display: flex;
+    position: relative;
 }
 
 .filter-input-radio + label::before{
     content: " ";
-    display: inline-block;
     background-image: url(../img/svg/radio-off.svg);
     width: 22px;
     height: 22px;
     background-size: 22px 22px;
     background-repeat: no-repeat;
-    transform: translateX(-10px);
     opacity: 0.8;
-  }
+    position: absolute;
+    top: -2px;
+    left: -30px;
+}
 
 .filter-input-radio + label:hover::before,
 .filter-input-radio + label:focus::before{
@@ -1206,34 +1281,22 @@ text-decoration-color: var(--accent-light-color-underline);
 
 
 /* checkbox filter  */
-.checkbox-field {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+.checkbox-field__item label{
     position: relative;
-    margin: 0;
-}
-
-.checkbox-field__item{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.checkbox-field label{
-    cursor: pointer;
-    display: flex;
 }
 
 .filter-input-checkbox + label::before{
     content: " ";
-    display: inline-block;
     background-image: url(../img/svg/checkbox-off.svg);
     width: 24px;
     height: 22px;
     background-size: 22px 22px;
     background-repeat: no-repeat;
-    transform: translateX(-10px);
     opacity: 0.8;
+    left: -30px;
+    top: -2px;
+    opacity: 0.8;
+    position: absolute;
   }
 
 .filter-input-checkbox + label:hover::before,
@@ -1251,6 +1314,10 @@ text-decoration-color: var(--accent-light-color-underline);
     width: 24px;
     height: 22px;
     background-size: 25px 22px;
+    left: -30px;
+    top: -2px;
+    opacity: 0.8;
+    position: absolute;
 }
 
 .checkbox-field input[type="checkbox"]:focus + label::before{
@@ -1376,7 +1443,7 @@ text-decoration-color: var(--accent-light-color-underline);
 
 
 /* Temporary disabling forms and slider  */
-.search-form, .login-form, .cart, .cart-full, .feedback_form, .slide-2, .slide-3{
+.search-form, .login-form, .cart, .feedback_form{
     display: none; 
 }
 
