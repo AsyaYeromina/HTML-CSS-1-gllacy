@@ -86,13 +86,27 @@ a{
   overflow: hidden;
 }
 
+
+/* MAIN GRID  */
+html{
+    height: 100%;
+}
+
+.page{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+
+/* STYLES FROM STYLEGUIDE  */
+
   /* Links */
 a:hover,
 a:focus,
 a:active{
     color: var(--accent-light-color);
 }
-
 
 
 /* Buttons */
@@ -120,6 +134,10 @@ a:active{
     color: var(--basic-white);
 }
 
+
+
+/* MAIN PAGE STYLES  */
+
 /* Header  */
 .width-container{
     width: 1146px;
@@ -145,6 +163,7 @@ a:active{
     height: 64px;
 }
 
+
 /* Navigation */
 .navigation{
     width: 100%;
@@ -162,6 +181,8 @@ a:active{
     margin-top: 12px;
 }
 
+
+/* Main navigation  */
 .main-navigation, 
 .main-navigation__sub{
     list-style: none;
@@ -181,10 +202,7 @@ a:active{
 }
 
 
-/* TEST VERSION STARTED  */
-
-
-/* Styles for menu items  */
+/* Styles for main menu items  */
 .main-navigation__link{
     text-decoration: underline;
     text-decoration-color: var(--link-underline-color);
@@ -218,7 +236,8 @@ a:active{
     text-decoration: none;
 }
 
-/* Styles for submenu items  */
+
+/* Submenu items  */
 .main-subnavigation__link{
     display: block;
     padding: 9px 13px 11px 13px;
@@ -248,6 +267,7 @@ a:active{
     list-style: none;
 }
 
+/* Submenu item of current page  */
 .current-page .main-subnavigation__link{
     background-color: var(--nav-dark-color);
     color: var(--basic-white);
@@ -259,6 +279,8 @@ a:active{
     color: var(--basic-white);
 }
 
+
+/* Special submenu item ("Новинки") */
 .main-navigation__subitem-special .main-navigation__link{
     font-weight: 700;
 }
@@ -272,6 +294,7 @@ a:active{
     margin: 0 auto;
 }
 
+/* Drop-down list (submenu) */
 .main-navigation__sub{
     background-color: var(--basic-white);
     box-shadow: 0px 20px 20px var(--subnavigation-box-shadow);
@@ -292,7 +315,7 @@ a:active{
     border-bottom-right-radius: 4px;
 }
 
-/* hiding submenu  */
+/* Hiding submenu  */
 .main-navigation__item{
     position: relative;
     margin-right: 8px;
@@ -317,7 +340,7 @@ a:active{
 }
 
 
-/* user navigation  */
+/* User navigation  */
 .user-navigation{
     display: flex;
     justify-content: flex-end;
@@ -327,11 +350,11 @@ a:active{
 .user-navigation__button{
     background-color: var(--user-nav-background);
     border-radius: 26px;
-    margin-right: 10px;
-    padding-bottom: 8px;
     padding-top: 6px;
     padding-right: 20px;
+    padding-bottom: 8px;
     padding-left: 20px;
+    margin-right: 10px;
 }
 
 .user-navigation__button:active{
@@ -342,20 +365,13 @@ a:active{
     margin-right: 0;
 }
 
-.cart-button{
-    display: none;
-}
 
-.cart-button-active{
-    display: block;
-}
-
-.cart-empty-button,
-.cart-full{
-    margin-right: 0;
-    padding-left: 45px;
-    padding-top: 8px;
-    position: relative;
+/* Search and login buttons */
+.search-button {
+    padding-bottom: 9px;
+    padding-top: 7px;
+    padding-right: 11px;
+    padding-left: 10px;
 }
 
 .search-button:hover,
@@ -364,18 +380,6 @@ a:active{
 .login-button:focus{
     color: var(--basic-dark-text-color);
     background-color: var(--basic-white);
-}
-
-.cart-empty-button:hover{
-    color: var(--basic-white);
-}
-
-
-.search-button {
-    padding-bottom: 9px;
-    padding-top: 7px;
-    padding-right: 11px;
-    padding-left: 10px;
 }
 
 .search-button svg,
@@ -391,6 +395,28 @@ a:active{
     fill: var(--basic-dark-text-color);
     color: var(--basic-dark-text-color);
     background-color: var(--basic-white);
+}
+
+
+/* Cart buttons  */
+.cart-button{
+    display: none;
+}
+
+.cart-button-active{
+    display: block;
+}
+
+.cart-empty-button,
+.cart-full{
+    margin-right: 0;
+    padding-top: 8px;
+    padding-left: 45px;
+    position: relative;
+}
+
+.cart-empty-button:hover{
+    color: var(--basic-white);
 }
 
 .cart-empty-button::before{
@@ -421,6 +447,7 @@ a:active{
     left: 15px;
 }
 
+/* Short info (tel number) */
 .short-info{
     font-size: 14px;
     line-height: 1.14;
@@ -442,34 +469,10 @@ a:active{
     color: var(--basic-white);
 }
 
-/* MAIN GRID  */
-html{
-    height: 100%;
-}
 
-.page{
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    align-content: start;
-}
-
-/* aligning product banners with flex  */
-.product-banners{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-}
-
-/* aligning catalog product items for for main page and catalog page with flex  */
-.product__catalog{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-/* OTHER STYLES FOR EACH SECTION  */
 /* Slider */
+
+/* Slide styles  */
 .slider{
     list-style: none;
     padding: 0;
@@ -481,14 +484,6 @@ html{
     justify-content: center;
     align-items: center;
     min-height: 524px;
-}
-
-.slide{
-    display: none;
-}
-
-.slide-current{
-    display: block;
 }
 
 .slide__title{
@@ -519,6 +514,7 @@ html{
 }
 
 
+/* Switching slides  */
 .slide-switcher{
     position: absolute;
     padding: 0;
@@ -548,6 +544,16 @@ html{
     background-color: var(--basic-white);
 }
 
+/* Hiding slides. Showing slide with special class  */
+.slide{
+    display: none;
+}
+
+.slide-current{
+    display: block;
+}
+
+/* Styles for each slide  */
 .page-1{
     background-color: var(--main-background1);
 }
@@ -560,18 +566,21 @@ html{
     background-color: var(--main-background3);
 }
 
-/* Product banners */
+
+/* Product banners  */
+/* aligning product banners with flex  */
 .product-banners{
     list-style: none;
     font-size: 18px;
     line-height: 1.22;
     font-weight: 700;
-    margin: 0;
-    padding: 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
 }
 
 .product-banners__item{
@@ -582,11 +591,11 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 16px 22px 22px 16px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     margin-bottom: 40px;
+    padding: 16px 22px 22px 16px;
 }
 
 .product-banners__item-1{
@@ -621,9 +630,16 @@ html{
 /* Hit products  */
 .product__catalog{
     list-style: none;
+    position: relative;
     margin: 0;
     padding: 0;
-    position: relative;
+}
+
+
+/* aligning catalog product items for main page and catalog page with flex */
+.product__catalog{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .product__catalog * {
@@ -685,7 +701,7 @@ html{
     min-height: 88px;
 }
 
-
+/* Cutting edges of product img  */
 .catalog-item__picture{
     border-radius: 50%;
     margin-bottom: 17px;
@@ -734,6 +750,7 @@ html{
     display: block;
 }
 
+
 /* About section */
 .about{
     width: 1146px;
@@ -743,8 +760,8 @@ html{
     background-repeat: repeat;
     color: var(--basic-dark-text-color);
     border-radius: 16px;
-    padding: 24px 20px 36px 20px;
     box-sizing: border-box;
+    padding: 24px 20px 36px 20px;
     margin-bottom: 40px;
 }
 
@@ -773,6 +790,7 @@ html{
     position: relative;
 }
 
+/* Icons for each feature  */
 .about__feature-item::before{
     content: " ";
     background-image: url(../img/svg/ice-cream.svg);
@@ -795,6 +813,7 @@ html{
 .about__feature-item:nth-child(4)::before{
     background-image: url(../img/svg/thermometer.svg);
 }
+
 
 /* Blog article  */
 .blog-subscription-container{
@@ -874,13 +893,6 @@ html{
     margin-bottom: 47px;
 }
 
-.subscription__input-button{
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .subscription__input{
     border: 1px solid var(--input-outline-border);
     border-radius: 6px;
@@ -907,6 +919,12 @@ html{
     padding-left: 14px;
 }
 
+.subscription__input-button{
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .subscription__button{
     padding-top: 14px;
@@ -914,6 +932,7 @@ html{
     padding-left: 19px;
     padding-right: 19px;
 }
+
 
 /* Address and map section */
 .address{
@@ -941,8 +960,8 @@ html{
     position: absolute;
     top: 62px;
     right: 27px;
-    padding: 32px 25px;
     box-sizing: border-box;
+    padding: 32px 25px;
 }
 
 .address__item{
@@ -965,9 +984,9 @@ html{
     
 }
 
-/* Footer */
+
+/* Footer grid */
 .main-footer{
-    /* padding-top: 18px; */
     padding-bottom: 25px;
 }
 
@@ -977,6 +996,7 @@ html{
     align-items: center;
     padding-top: 18px;
 }
+
 
 /* line before footer  */
 .main-footer::before{
@@ -990,7 +1010,9 @@ html{
 .home-page-main + .main-footer::before {
     display: none;
 }
-/* socisls icons in footer  */
+
+
+/* socials icons in footer  */
 .socials{
     padding: 0;
     margin: 0;
@@ -1018,6 +1040,7 @@ html{
     fill: var(--basic-white);
     border: 2px solid var(--social-icon-fill-active);
 }
+
 
 /* Footer info links*/
 .footer-info{
@@ -1064,7 +1087,8 @@ html{
     left: -20px;
 }
 
-/* dev links in footer  */
+
+/* Copyright link in footer  */
 .copyright-container{
     margin-left: auto;
 }
@@ -1088,11 +1112,12 @@ html{
 
 
 
+
 /* !CATALOG PAGE  */
 
 
 
-/* breadcrumbs  */
+/* Breadcrumbs  */
 .breadcrumbs{
     margin-bottom: 10px;
     margin-top: 28px;
@@ -1135,6 +1160,7 @@ html{
 text-decoration-color: var(--accent-light-color-underline);
 }
 
+
 /* h1 of catalog page  */
 .catalog-page-heading{
     margin: 0;
@@ -1142,25 +1168,13 @@ text-decoration-color: var(--accent-light-color-underline);
     margin-bottom: 30px;
 }
 
+
 /* FILTERS  */
 /* all filters styles  */
 .filter-item{
     border: none;
     padding: 0;
     margin: 0;
-}
-
-.filters-fieldset-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.sort-wrapper, .range-wrapper, .radiobuttons-wrapper, .checkbox-wrapper{
-    display: flex;
-    flex-direction: column;
-    margin-right: 15px;
-    margin-bottom: 14px;
 }
 
 .filter-name {
@@ -1178,7 +1192,25 @@ text-decoration-color: var(--accent-light-color-underline);
     border-radius: 20px;
 }
 
-/* sort filter (select) */
+
+/* Aligning all filters with flex  */
+.filters-fieldset-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/* Aligning each filter and label with flex  */
+.sort-wrapper, .range-wrapper, .radiobuttons-wrapper, .checkbox-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-bottom: 14px;
+}
+
+
+/* Sort filter (select) */
 .sort-wrapper{
     position: relative;
 }
@@ -1214,6 +1246,7 @@ text-decoration-color: var(--accent-light-color-underline);
     right: 0;
     transform: translate(-100%, -130%);
 }
+
 
 /* Range-price filter  */
 .range-controls{
@@ -1269,7 +1302,8 @@ text-decoration-color: var(--accent-light-color-underline);
     transform: translateY(-10px);
 }
 
-/* radio and checkbox items  */
+
+/* Radio and checkbox items  */
 .radiobuttons-field,
 .checkbox-field{
     list-style: none;
@@ -1300,6 +1334,8 @@ text-decoration-color: var(--accent-light-color-underline);
     position: relative;
 }
 
+
+/* Radiobuttons filter */
 .filter-input-radio + label::before{
     content: " ";
     background-image: url(../img/svg/radio-off.svg);
@@ -1331,7 +1367,7 @@ text-decoration-color: var(--accent-light-color-underline);
 }
 
 
-/* checkbox filter  */
+/* Checkbox filter  */
 .checkbox-field__item label{
     position: relative;
 }
@@ -1413,7 +1449,10 @@ text-decoration-color: var(--accent-light-color-underline);
     padding: 13px 29px 12px 29px;
 }
 
-/* CATALOG  */
+
+/* CATALOG 
+same styles as on main page */
+
 
 /* PAGINATION  */
 .pagination{
