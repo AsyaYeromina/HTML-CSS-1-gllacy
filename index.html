@@ -9,32 +9,37 @@
   </head>
   <body class="page page-1">
 
+    <!-- Classes page-1, page-2, page-3 should be changed 
+    after click on button with class "slide-switcher__button" 
+    (see more details below in comments for slide-switcher ) -->
+
+
     <!-- HEADER / MAIN NAVIGATION -->
-    <header class="header-container width-container">
+    <header class="header-container width-wrapper">
       <nav class="navigation">
         <a class="logo-link">
           <img class="logo" src="img/svg/logo.svg" width="154" height="64" alt="Логотип Gllacy shop">
         </a>
         <div class="navigation-container">
           <ul class="main-navigation">
-            <li  class="main-navigation__item" aria-haspopup="true"><a class="main-navigation__link" href="" aria-label="Каталог">Каталог</a>
-              <ul class="main-navigation__sub" aria-label="submenu">
-                <li class="main-navigation__subitem main-navigation__subitem-special"><a class="main-subnavigation__link" href="" aria-label="Новинки">Новинки</a></li>
-                <li class="main-navigation__subitem"><a class="main-subnavigation__link" href="catalog.html" aria-label="Сливочное">Сливочное</a></li>
-                <li class="main-navigation__subitem"><a class="main-subnavigation__link" href="" aria-label="Щербеты">Щербеты</a></li>
-                <li class="main-navigation__subitem"><a class="main-subnavigation__link" href="" aria-label="Фруктовый лед">Фруктовый лед</a></li>
-                <li class="main-navigation__subitem"><a class="main-subnavigation__link" href="" aria-label="Мелорин">Мелорин</a></li>
+            <li  class="main-navigation__item" aria-haspopup="true"><a class="main-navigation__link" href="">Каталог</a>
+              <ul class="main-navigation__sub">
+                <li class="main-navigation__subitem main-navigation__subitem-special"><a class="main-subnavigation__link" href="">Новинки</a></li>
+                <li class="main-navigation__subitem"><a class="main-subnavigation__link" href="catalog.html">Сливочное</a></li>
+                <li class="main-navigation__subitem"><a class="main-subnavigation__link" href="">Щербеты</a></li>
+                <li class="main-navigation__subitem"><a class="main-subnavigation__link" href="">Фруктовый лед</a></li>
+                <li class="main-navigation__subitem"><a class="main-subnavigation__link" href="">Мелорин</a></li>
               </ul>
             </li>
-            <li class="main-navigation__item"><a class="main-navigation__link" href="" aria-label="Доставка и оплата">Доставка и оплата</a></li>
-            <li class="main-navigation__item"><a class="main-navigation__link" href="" aria-label="О компании">О компании</a></li>
+            <li class="main-navigation__item"><a class="main-navigation__link" href="">Доставка и оплата</a></li>
+            <li class="main-navigation__item"><a class="main-navigation__link" href="">О компании</a></li>
             <li class="main-navigation__item main-navigation__blank-page"><a href="blank.html"></a></li>
           </ul>
 
       <!-- FORMS / USER NAVIGATION -->
           <div class="user-navigation">
-            <a class="user-navigation__button search-button" href="" aria-label="Поиск">
-              <span class="visuallyhidden">Искать</span>
+            <a class="user-navigation__button search-button" href="">
+              <span class="visuallyhidden">Поиск</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
                 <path d="M16.96 15.53l-5.21-5.21A6.46 6.46 0 0013 6.5 6.5 6.5 0 106.5 13a6.46 6.46 0 003.84-1.26l5.2 5.2 1.42-1.41zM6.5 11a4.5 4.5 0 11.01-9.01A4.5 4.5 0 016.5 11z"/>
               </svg>
@@ -68,31 +73,36 @@
             <a href="" class="user-navigation__button cart-full cart-button">
               <span>2 товара</span>
             </a>
-            <form class="cart-form" action="https://echo.htmlacademy.ru/courses" method="get">
+            <form class="cart-form" action="https://echo.htmlacademy.ru/courses" method="get" aria-label="Список товаров в корзине">
               <ul class="order-list">
                 <li>
                   <a href="">
                     <span class="visuallyhidden">Удалить</span>
                   </a>
-                  <a href="" aria-label="Пломбир с апельсиновым джемом"></a>
-                  <p>1,5 кг&#215;<span>200 руб.</span></p>
-                  <p>300 руб.</p>
+                  <a href="">
+                    <span>Пломбир с апельсиновым джемом</span>
+                    <span>1,5 кг&#215;<span>200 руб.</span></span>
+                    <span>300 руб.</span>
+                  </a>
                 </li>
                 <li>
                   <a href="">
                     <span class="visuallyhidden">Удалить</span>
                   </a>
-                  <a href="" aria-label="Клубничный пломбир с присыпкой из белого шоколада"></a>
-                  <p>1,5 кг&#215;<span>300 руб.</span></p>
-                  <p>450 руб.</p>
+                  <a href="">
+                    <span>Клубничный пломбир с присыпкой из белого шоколада</span>
+                    <span>1,5 кг&#215;<span>300 руб.</span></span>
+                    <span>450 руб.</span>
+                  </a>
                 </li>
               </ul>
-              <p>Итого: 750 руб.</p>
+              <span>Итого: 750 руб.</span>
               <button class="button" type="submit">Оформить заказ</button>
             </form>
           </div>
         </div>
       </nav>
+
       <p class="short-info">с 10 до 20, ежедневно<br><a class="phone-number" href="tel:88124502525">8 812 450-25-25</a></p>
       
     </header>
@@ -101,35 +111,61 @@
     <!-- MAIN  -->
     <main class="home-page-main">
       <h1 class="visuallyhidden">Gllacy shop - Магазин мороженого</h1>
-      <div class="width-container">
-
         <!-- MAIN__PRODUCTS -->
-
-        <section class="product">
+      <section class="product">
+        <div class="width-wrapper">
           <h2 class="visuallyhidden">Товары</h2>
-
+          
           <ol class="slider">
-            <li class="slide-1 slide slide-current">
+            <!-- Class "current slide" is setting up for this slide after click on first slide-switcher__button -->
+            <li class="slide-1 slide current-slide">
               <h3 class="slide__title">Крем-брюле и&nbsp;пломбир с&nbsp;малиновым джемом</h3>
               <img class="slide__img" src="img/icecream-slider-1.png" width="647" height="584" alt="Две мороженки. Крем-брюле и пломбир с малиновым джемом">
               <a class="button slide__button" href="">Давайте оба!</a>
             </li>
+            <!-- Class "current slide" is setting up for this slide after click on second slide-switcher__button -->
             <li class="slide-2 slide">
               <h3 class="slide__title">Шоколадный пломбир и&nbsp;лимонный сорбет</h3>
               <img class="slide__img" src="img/icecream-slider-2.png" width="647" height="584" alt="Две мороженки. Шоколадный пломбир и лимонный сорбет">
               <a class="button slide__button" href="">Давайте оба!</a>
             </li>
+            <!-- Class "current slide" is setting up for this slide after click on third slide-switcher__button -->
             <li class="slide-3 slide">
               <h3 class="slide__title">Пломбир с&nbsp;помадкой и&nbsp;клубничный щербет</h3>
               <img class="slide__img" src="img/icecream-slider-3.png" width="647" height="584" alt="Две мороженки. Пломбир с помадкой и клубничный щербет">
               <a class="slide__button button" href="">Давайте оба!</a>
             </li>
-            <ol class="slide-switcher">
-              <button class="slide-switcher__button current-slide-button" type="button" aria-label="Первый слайд"></button>
-              <button class="slide-switcher__button" type="button" aria-label="Второй слайд"></button>
-              <button class="slide-switcher__button" type="button" aria-label="Третий слайд"></button>
-            </ol>
           </ol>
+
+          <ul class="slide-switcher">
+            <li> 
+              <!-- Button for slide-1 is:
+              - seting the "current-slide" class to slide-1
+              - setting the "page-1" class to body 
+              - setting class "current-slide-button"to this button -->
+              <button class="slide-switcher__button current-slide-button" type="button">
+                <span class="visuallyhidden">Первый слайд</span>
+              </button> 
+            </li>
+            <li>
+            <!-- Button for slide-2 is:
+            - seting the "current-slide" class to slide-2
+            - setting the "page-2" class to body 
+            - setting class "current-slide-button"to this button -->
+              <button class="slide-switcher__button" type="button">
+                <span class="visuallyhidden">Второй слайд</span>
+              </button>
+            </li>
+            <li>
+            <!-- Button for slide-3 is:
+            - seting the "current-slide" class to slide-3
+            - setting the "page-3" class to body 
+            - setting class "current-slide-button"to this button -->
+              <button class="slide-switcher__button" type="button">
+                <span class="visuallyhidden">Третий слайд</span>
+              </button>
+            </li>
+          </ul>
 
           <ul class="product-banners">
             <li class="product-banners__item product-banners__item-1">
@@ -143,65 +179,69 @@
               <a class="button" href="">Хочу шоколадки!</a>
             </li>
           </ul>
+        </div>
 
+        <div class="width-catalog-wrapper">
           <ul class="product__catalog">
             <li class="catalog-item">
               <a class="catalog-item__link" href="">
                 <h3 class="catalog-item__name">Сливочное с&nbsp;апельсиновым джемом и&nbsp;цитрусовой стружкой</h3>
               </a>
-              <a class="hit" href="">
+              <a class="hit" href="" tabindex="-1">
                 <picture class="catalog-item__picture">
                   <img class="catalog-item__img" src="img/icecream1.jpg" width="267" height="267" alt="Фотография мороженого">
                 </picture>
                 <span class="visuallyhidden">Хит продаж</span>
               </a>
               <p class="catalog-item__prise">310&#8381;<span class="catalog-item__prise-desc">/кг</span></p>
-              <a class="button catalog-item__button" href="">Быстрый просмотр</a>
+              <a class="button catalog-item__button" href="www.google.com">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
               <a class="catalog-item__link" href="">
                 <h3 class="catalog-item__name">Сливочно-кофейное с&nbsp;кусочками шоколада</h3>
               </a>
-              <a class="hit" href="">
+              <a class="hit" href="" tabindex="-1">
                 <picture class="catalog-item__picture">
                   <img class="catalog-item__img" src="img/icecream2.jpg" width="267" height="267" alt="Фотография мороженого">
                 </picture>
                 <span class="visuallyhidden">Хит продаж</span>
               </a>
               <p class="catalog-item__prise">380&#8381;<span class="catalog-item__prise-desc">/кг</span></p>
-            <a class="button catalog-item__button" href="">Быстрый просмотр</a>
+            <a class="button catalog-item__button" href="www.google.com">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
               <a class="catalog-item__link" href="">
                 <h3 class="catalog-item__name">Сливочно-клубничное с&nbsp;присыпкой из&nbsp;белого шоколада</h3>
               </a>
-              <a class="hit" href="">
+              <a class="hit" href="" tabindex="-1">
                 <picture class="catalog-item__picture">
                   <img class="catalog-item__img" src="img/icecream3.jpg" width="267" height="267" alt="Фотография мороженого">
                 </picture>
                 <span class="visuallyhidden">Хит продаж</span>
               </a>
               <p class="catalog-item__prise">355&#8381;<span class="catalog-item__prise-desc">/кг</span></p>
-              <a class="button catalog-item__button" href="">Быстрый просмотр</a>
+              <a class="button catalog-item__button" href="www.google.com">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
               <a class="catalog-item__link" href="">
                 <h3 class="catalog-item__name">Сливочное крем-брюле с&nbsp;карамельной подливкой</h3>
               </a>
-              <a class="hit" href="">
+              <a class="hit" href="" tabindex="-1">
                 <picture class="catalog-item__picture">
                   <img class="catalog-item__img" src="img/icecream4.jpg" width="267" height="267" alt="Фотография мороженого">
                 </picture>
                 <span class="visuallyhidden">Хит продаж</span>
               </a>
               <p class="catalog-item__prise">415&#8381;<span class="catalog-item__prise-desc">/кг</span></p>
-              <a class="button catalog-item__button" href="">Быстрый просмотр</a>
+              <a class="button catalog-item__button" href="www.google.com">Быстрый просмотр</a>
             </li>
           </ul>
-        </section>
-        
-        <!-- MAIN__ABOUT -->
+        </div>
+      </section>
+      
+      <!-- MAIN__ABOUT -->
 
+      <div class="width-wrapper">
         <section class="about">
           <h2 class="visuallyhidden">О магазине</h2>
           <p class="about__title">Магазин Глэйси&nbsp;&mdash; это онлайн и&nbsp;офлайн-магазин по&nbsp;продаже мороженого собственного проиводства на&nbsp;развес</p>
@@ -212,13 +252,12 @@
             <li class="about__feature-item">Доставка нашего мороженного до&nbsp;заказчиков осуществляется в&nbsp;специальном термопаке, который не&nbsp;дает мороженому растаять в&nbsp;пути и&nbsp;позволяет сохранить превосходный вкус.</li>
           </ul>
         </section>
-        
-        <!-- MAIN__BLOG ARTICLE -->
+      <!-- MAIN__BLOG ARTICLE -->
         <div class="blog-subscription-container">
           <article class="blog-article">
             <p class="blog-article__subject">Новое в нашем блоге</p>
             <a href="">
-              <h2 class="blog-article__heading">10&nbsp;способов сервировки <br>фруктовых щербетов <br>к&nbsp;столу</h2>
+              <h2 class="blog-article__heading">10&nbsp;способов сервировки <br>фруктовых щербетов  &nbsp;  <br>к&nbsp;столу</h2>
             </a>
           </article>
           
@@ -236,21 +275,23 @@
         </div>
       </div>
       <!-- MAP & ADDRESS -->
-      <section class="address map-container">
-        <h2 class="visuallyhidden">Контакты</h2>
-        <img class="address__img" src="img/map.jpg" width="1200" height="430" alt="Карта">
-         <div class="address-container">
-          <p class="address__item address__shop">Адрес главного офиса<br> и&nbsp;офлайн-магазина:<br><b>ул. Большая Конюшенная,<br> 19/8, Санкт-Петербург</b></p>
-          <p class="address__item address__phone">Для заказов по телефону: <br><b>8 812 450-25-25</b><br>(с 10 до 20 ежедневно)</p>
-          <a href="" class="address__button button">Форма обратной связи</a>
-        </div>
-      </section>
+      <div class="width-big-wrapper">
+        <section class="address">
+          <h2 class="visuallyhidden">Контакты</h2>
+          <img class="address__img" src="img/map.jpg" width="1200" height="430" alt="Карта">
+          <div class="address-container">
+            <p class="address__item address__shop">Адрес главного офиса<br> и&nbsp;офлайн-магазина:<br><b>ул. Большая Конюшенная,<br> 19/8, Санкт-Петербург</b></p>
+            <p class="address__item address__phone">Для заказов по телефону: <br><b>8 812 450-25-25</b><br>(с 10 до 20 ежедневно)</p>
+            <a href="" class="address__button button">Форма обратной связи</a>
+          </div>
+        </section>
+      </div>
     </main>
 
 
     <!-- FOOTER  -->
 
-    <footer class="main-footer width-container">
+    <footer class="main-footer width-wrapper">
       <div class="main-footer-container">
         <ul class="socials">
           <li class="socials__item">

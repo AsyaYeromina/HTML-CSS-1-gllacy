@@ -138,13 +138,26 @@ a:active{
 
 /* MAIN PAGE STYLES  */
 
-/* Header  */
-.width-container{
+/* Width containers */
+.width-wrapper{
     width: 1146px;
     margin: 0 auto;
     padding: 0 27px;
 }
 
+.width-catalog-wrapper{
+    width: 1172px;
+    margin: 0 auto;
+    padding: 0 13px;
+}
+
+.width-big-wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Header  */
 .header-container{
     display: flex;
     flex-wrap: wrap;
@@ -175,8 +188,8 @@ a:active{
 
 .navigation-container{
     display: flex;
+    flex-grow: 1;
     justify-content: space-between;
-    width: 100%;
     align-items: start;
     margin-top: 12px;
 }
@@ -207,6 +220,7 @@ a:active{
     text-decoration: underline;
     text-decoration-color: var(--link-underline-color);
     text-decoration-skip-ink: none;
+    text-decoration-skip: objects;
     padding: 9px 13px 11px 13px;
     display: block;
     margin-bottom: 6px;
@@ -234,6 +248,11 @@ a:active{
 
 .current-nav{
     text-decoration: none;
+}
+
+.current-nav:focus{
+    background-color: var(--basic-white);
+    color: var(--basic-dark-text-color);
 }
 
 
@@ -478,12 +497,15 @@ a:active{
     padding: 0;
     margin: 0;
     margin-bottom: 40px;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 524px;
+}
+
+.slide{
+    position: relative;
 }
 
 .slide__title{
@@ -498,7 +520,7 @@ a:active{
 .slide__img{
     position: absolute;
     z-index: -2;
-    top: 10px;
+    top: 22px;
 }
 
 .slide__button{
@@ -519,8 +541,8 @@ a:active{
     position: absolute;
     padding: 0;
     margin: 0;
-    left: 0;
-    bottom: 20px;
+    list-style: none;
+    top: 620px;
     z-index: 20;
     display: flex;
     width: 67px;
@@ -537,9 +559,11 @@ a:active{
     cursor: pointer;
 }
 
-.slide-switcher__button:hover{
+.slide-switcher__button:hover,
+.slide-switcher__button:focus{
     background-color: var(--social-icon-border);
 }
+
 .current-slide-button{
     background-color: var(--basic-white);
 }
@@ -549,7 +573,7 @@ a:active{
     display: none;
 }
 
-.slide-current{
+.current-slide{
     display: block;
 }
 
@@ -662,7 +686,8 @@ a:active{
     position: relative;
 }
 
-.catalog-item:hover::before{
+.catalog-item:hover::before,
+.catalog-item:focus::before{
     content: " ";
     width: 100%;
     height: 100%;
@@ -675,7 +700,8 @@ a:active{
     padding-bottom: 40px;
 }
 
-.catalog-item:hover{
+.catalog-item:hover,
+.catalog-item:focus{
     z-index: 2;
 }
 
@@ -683,13 +709,15 @@ a:active{
     text-decoration: underline;
     text-decoration-color: var(--link-underline-color);
     text-decoration-skip-ink: none;
+    text-decoration-skip: objects;
     font-size: 16px;
     line-height: 1.38;
     font-weight: 500;
     order: 2;
 }
 
-.catalog-item__link:hover{
+.catalog-item__link:hover,
+.catalog-item__link:focus{
     text-decoration-color: var(--accent-light-color-underline);
 }
 
@@ -741,13 +769,33 @@ a:active{
 
 .catalog-item__button{
     align-self: center;
-    display: none;
     position: absolute;
     bottom: -20px;
+    will-change: opacity;
+    animation-name: fadeOut;
+    animation-delay: 20ms;
+    animation-duration: 5ms;
+    animation-fill-mode: forwards;
 }
 
-.catalog-item:hover .catalog-item__button{
-    display: block;
+@keyframes fadeOut {
+    0%{ opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.catalog-item:hover .catalog-item__button,
+.catalog-item:focus .catalog-item__button,
+.catalog-item__link:focus ~ .catalog-item__button,
+.catalog-item__button:focus{
+    animation-name: fadeIn;
+    animation-duration: 5ms;
+    animation-delay: 25ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0%{ opacity: 1; }
+    100% { opacity: 1; }
 }
 
 
@@ -854,6 +902,7 @@ a:active{
     text-decoration: underline;
     text-decoration-color: var(--blog-link-underline);
     text-decoration-skip-ink: none;
+    text-decoration-skip: objects;
     text-decoration-thickness: 2px;
     padding: 0;
     margin: 0;
@@ -938,11 +987,6 @@ a:active{
 .address{
     position: relative;
     height: 430px;
-}
-
-.map-container{
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .address__img{
@@ -1063,10 +1107,11 @@ a:active{
     text-decoration: underline;
     text-decoration-color: var(--link-underline-color);
     text-decoration-skip-ink: none;
-    text-decoration-thickness: 1px;
+    text-decoration-skip: objects;
 }
 
-.footer-info__item-link:hover{
+.footer-info__item-link:hover,
+.footer-info__item-link:focus{
     text-decoration-color: var(--accent-light-color-underline);
 }
 
@@ -1103,10 +1148,11 @@ a:active{
     text-decoration: underline;
     text-decoration-color: var(--link-underline-color);
     text-decoration-skip-ink: none;
-    text-decoration-thickness: 1px;
+    text-decoration-skip: objects;
 }
 
-.copyright__link:hover{
+.copyright__link:hover,
+.copyright__link:focus{
     text-decoration-color: var(--accent-light-color-underline);
 }
 
@@ -1153,11 +1199,16 @@ a:active{
     text-decoration: underline;
     text-decoration-color: var(--link-underline-color);
     text-decoration-skip-ink: none;
-    text-decoration-thickness: 1px;
+    text-decoration-skip: objects;
 }
 
-.breadcrumbs a:hover{
-text-decoration-color: var(--accent-light-color-underline);
+.breadcrumbs a[href]:hover,
+.breadcrumbs a[href]:focus{
+    text-decoration-color: var(--accent-light-color-underline);
+}
+
+.breadcrumbs a:not([href]):hover{
+    color: var(--basic-white);
 }
 
 
@@ -1429,7 +1480,7 @@ text-decoration-color: var(--accent-light-color-underline);
     font-size: 16px;
     line-height: 1.38;
     font-weight: 500;
-    padding: 12px 29px 10px 29px;
+    padding: 10px 32px 10px 32px;
     border-radius: 24px;
 }
 
@@ -1445,8 +1496,8 @@ text-decoration-color: var(--accent-light-color-underline);
     border: none;
     color: var(--basic-dark-text-color);
     background-color: var(--basic-white);
-    box-shadow: inset 0 2px 3px 2px var(--basic-grey-text-color);
-    padding: 13px 29px 12px 29px;
+    box-shadow: inset 0 2px 2px 0px var(--basic-grey-text-color);
+    padding: 12px 32px;
 }
 
 
@@ -1497,7 +1548,7 @@ same styles as on main page */
 }
 
 .pagination__page:hover,
-.paginationpage:focus,
+.pagination__page:focus,
 .pagination__next:hover,
 .pagination__next:focus{
     color: var(--basic-white);
