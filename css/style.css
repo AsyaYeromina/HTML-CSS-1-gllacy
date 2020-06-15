@@ -129,7 +129,7 @@ a:active{
 .link-underline:hover,
 .link-underline:focus,
 .link-underline:active{
-    text-decoration-color: var(--link-underline-color);
+    text-decoration-color: var(--accent-light-color-underline);
 }
 
 /* OR underline for links with box-shadow  */
@@ -775,8 +775,14 @@ a:active{
 
 .catalog-item__link:hover .link-underline,
 .catalog-item__link:focus .link-underline{
-    box-shadow: 0 1px 0 0 var(--accent-light-color-underline);
+    /* box-shadow: 0 1px 0 0 var(--accent-light-color-underline); */
+    text-decoration-color: var(--accent-light-color-underline);
 }
+
+.catalog-item__name:hover{
+    /* text-decoration-color: var(--accent-light-color-underline); */
+}
+
 
 .catalog-item__name{
     font-weight: 400;
