@@ -35,67 +35,81 @@
 
       <!-- FORMS / USER NAVIGATION -->
       <div class="user-navigation">
-        <a class="user-navigation__button search-button" href="">
-          <span class="visuallyhidden">Поиск</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
-            <path d="M16.96 15.53l-5.21-5.21A6.46 6.46 0 0013 6.5 6.5 6.5 0 106.5 13a6.46 6.46 0 003.84-1.26l5.2 5.2 1.42-1.41zM6.5 11a4.5 4.5 0 11.01-9.01A4.5 4.5 0 016.5 11z"/>
-          </svg>
-        </a>
-        <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="get">
-          <label class="visuallyhidden" for="search">Поиск по сайту</label>
-          <input type="search" id="search" name="search">
-        </form>
 
-        <a class="user-navigation__button login-button" href="">
-          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"><path d="M6 14.88l6.92-5.38L6 4.12v2.92H-.04v4.92H6z"/><path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13a2 2 0 002-2V2a2 2 0 00-2-2z"/></svg>
-          <span>Вход</span>
-        </a>
-        <form class="login-form" action="https://echo.htmlacademy.ru/courses" method="get">
-          <p>
+        <!-- Search form -->
+        <div class="search-wrapper">
+          <a class="user-navigation__button search-button" href="">
+            <span class="visuallyhidden">Поиск</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+              <path d="M16.96 15.53l-5.21-5.21A6.46 6.46 0 0013 6.5 6.5 6.5 0 106.5 13a6.46 6.46 0 003.84-1.26l5.2 5.2 1.42-1.41zM6.5 11a4.5 4.5 0 11.01-9.01A4.5 4.5 0 016.5 11z"/>
+            </svg>
+          </a>
+          <form class="search-form user-navigation__modal" action="https://echo.htmlacademy.ru/courses" method="get">
+            <label class="visuallyhidden" for="search">Поиск по сайту</label>
+            <input class="user-navigation__input search-form__input custom-input" type="search" id="search" name="search" placeholder="Крем-брюле">
+          </form>
+        </div>
+
+        <!-- Login form -->
+        <div class="login-wrapper">
+          <a class="user-navigation__button login-button" href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"><path d="M6 14.88l6.92-5.38L6 4.12v2.92H-.04v4.92H6z"/><path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13a2 2 0 002-2V2a2 2 0 00-2-2z"/></svg>
+            <span>Вход</span>
+          </a>
+          <form class="login-form user-navigation__modal" action="https://echo.htmlacademy.ru/courses" method="get">
             <label class="visuallyhidden" for="login-email">Введите e-mail</label>
-            <input type="email" id="login-email" name="email" required>
-          </p>
-          <p>
+            <input class="user-navigation__input login-form__input custom-input" type="email" id="login-email" name="email" placeholder="email@example.com" required>
             <label class="visuallyhidden" for="password">Введите пароль</label>
-            <input type="password" id="password" name="password" required>
-          </p>
-          <button class="button" type="submit">Войти</button>
-          <a href="" aria-label="Страница востановления пароля">Забыли пароль?</a>
-          <a href="" aria-label="Страница регистрации">Новая регистрация</a>
-        </form>
-
+            <input class="user-navigation__input login-form__input custom-input" type="password" id="password" name="password" placeholder="••••••" required>
+            <div class="login-button-link-wrapper">
+              <button class="button login-form__button" type="submit">Войти</button>
+              <div class="login-link-wrapper">
+                <a class="form__link" href="" aria-label="Страница востановления пароля">Забыли пароль?</a>
+                <a class="form__link" href="" aria-label="Страница регистрации">Новая регистрация</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Cart empty -->
+        <!-- Class "cart-button-active" should be on this link when the cart is empty -->
         <a class="user-navigation__button cart-empty-button cart-button">
           <span>Пусто</span>
         </a>
-        <a href="" class="user-navigation__button cart-full cart-button cart-button-active">
-          <span>2 товара</span>
-        </a>
-        <form class="cart-form" action="https://echo.htmlacademy.ru/courses" method="get" aria-label="Список товаров в корзине">
-          <ul class="order-list">
-            <li>
-              <a href="">
-                <span class="visuallyhidden">Удалить</span>
-              </a>
-              <a href="">
-                <span>Пломбир с апельсиновым джемом</span>
-                <span>1,5 кг&#215;<span>200 руб.</span></span>
-                <span>300 руб.</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="visuallyhidden">Удалить</span>
-              </a>
-              <a href="">
-                <span>Клубничный пломбир с присыпкой из белого шоколада</span>
-                <span>1,5 кг&#215;<span>300 руб.</span></span>
-                <span>450 руб.</span>
-              </a>
-            </li>
-          </ul>
-          <span>Итого: 750 руб.</span>
-          <button class="button" type="submit">Оформить заказ</button>
-        </form>
+        <div class="cart-full-wrapper">
+        <!-- Cart full with modal  -->
+        <!-- Class "cart-button-active" should be on this link when the cart is full -->
+          <a href="" class="user-navigation__button cart-full cart-button cart-button-active">
+            <span>2 товара</span>
+          </a>
+          <form class="cart-form user-navigation__modal" action="https://echo.htmlacademy.ru/courses" method="get" aria-label="Список товаров в корзине">
+            <ul class="cart-full__order-list">
+              <li class="cart-full__list-item">
+                <a class="cart-full__delete-button" href="">
+                  <span class="visuallyhidden">Удалить</span>
+                </a>
+                <a class="order-list__product" href="">
+                  <span>Пломбир с апельсиновым джемом</span>
+                </a>
+                <span class="order-list__weight">1,5 кг&#215;<span class="order-list__product-prise">200 руб.</span></span>
+                <span class="order-list__weight-prise">300 руб.</span>
+              </li>
+              <li class="cart-full__list-item">
+                <a class="cart-full__delete-button" href="">
+                  <span class="visuallyhidden">Удалить</span>
+                </a>
+                <a class="order-list__product" href="">
+                  <span>Клубничный пломбир с присыпкой из белого шоколада</span>
+                </a>
+                <span class="order-list__weight">1,5 кг&#215;<span class="order-list__product-prise">300 руб.</span></span>
+                <span class="order-list__weight-prise">450 руб.</span>
+              </li>
+            </ul>
+            <span class="cart-full__final-prise">Итого: 750 руб.</span>
+            <button class="button cart-full__submit-button" type="submit">Оформить заказ</button>
+          </form>
+        </div>
+
+
       </div>
       </div>
       </nav>
