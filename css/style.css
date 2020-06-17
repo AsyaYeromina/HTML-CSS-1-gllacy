@@ -1770,7 +1770,8 @@ p.feedback_form__title{
 }
 
 .range-controls .bar{
-    width: 70%;
+    width: 43%;
+    margin-left: 20%;
     height: 2px;
     background: var(--range-input-bar);
 }
@@ -1954,7 +1955,7 @@ p.feedback_form__title{
     color: var(--basic-dark-text-color);
     background-color: var(--basic-white);
     box-shadow: inset 0 2px 2px 0px var(--basic-grey-text-color);
-    padding: 12px 32px;
+    padding: 8px 30px 7px 30px;
 }
 
 
@@ -1993,7 +1994,7 @@ same styles as on main page */
     height: 26px;
     border-radius: 50%;
     font-size: 16px;
-    line-height: 1.88;
+    line-height: 1.7;
     text-align: center;
 }
 
