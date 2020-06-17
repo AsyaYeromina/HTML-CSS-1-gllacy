@@ -21,7 +21,7 @@
         <ul class="main-navigation">
           <li  class="main-navigation__item" aria-haspopup="true"><a class="main-navigation__link current-nav" href="">Каталог</a>
             <ul class="main-navigation__sub">
-              <li class="main-navigation__subitem main-navigation__subitem-special"><a class="main-subnavigation__link" href="">Новинки</a></li>
+              <li class="main-navigation__subitem main-navigation__subitem-special"><a class="main-subnavigation__link main-subnavigation__link-special" href="">Новинки</a></li>
               <li class="main-navigation__subitem current-page"><a class="main-subnavigation__link" href="catalog.html"><span class="visuallyhidden">Текущий пункт меню:</span>Сливочное</a></li>
               <li class="main-navigation__subitem"><a class="main-subnavigation__link" href="">Щербеты</a></li>
               <li class="main-navigation__subitem"><a class="main-subnavigation__link" href="">Фруктовый лед</a></li>
@@ -36,46 +36,47 @@
       <!-- FORMS / USER NAVIGATION -->
       <div class="user-navigation">
 
-        <!-- Search form -->
-        <div class="search-wrapper">
-          <a class="user-navigation__button search-button" href="">
-            <span class="visuallyhidden">Поиск</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
-              <path d="M16.96 15.53l-5.21-5.21A6.46 6.46 0 0013 6.5 6.5 6.5 0 106.5 13a6.46 6.46 0 003.84-1.26l5.2 5.2 1.42-1.41zM6.5 11a4.5 4.5 0 11.01-9.01A4.5 4.5 0 016.5 11z"/>
-            </svg>
-          </a>
-          <form class="search-form user-navigation__modal" action="https://echo.htmlacademy.ru/courses" method="get">
-            <label class="visuallyhidden" for="search">Поиск по сайту</label>
-            <input class="user-navigation__input search-form__input custom-input" type="search" id="search" name="search" placeholder="Крем-брюле">
-          </form>
-        </div>
-
-        <!-- Login form -->
-        <div class="login-wrapper">
-          <a class="user-navigation__button login-button" href="">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"><path d="M6 14.88l6.92-5.38L6 4.12v2.92H-.04v4.92H6z"/><path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13a2 2 0 002-2V2a2 2 0 00-2-2z"/></svg>
-            <span>Вход</span>
-          </a>
-          <form class="login-form user-navigation__modal" action="https://echo.htmlacademy.ru/courses" method="get">
-            <label class="visuallyhidden" for="login-email">Введите e-mail</label>
-            <input class="user-navigation__input login-form__input custom-input" type="email" id="login-email" name="email" placeholder="email@example.com" required>
-            <label class="visuallyhidden" for="password">Введите пароль</label>
-            <input class="user-navigation__input login-form__input custom-input" type="password" id="password" name="password" placeholder="••••••" required>
-            <div class="login-button-link-wrapper">
-              <button class="button login-form__button" type="submit">Войти</button>
-              <div class="login-link-wrapper">
-                <a class="form__link" href="" aria-label="Страница востановления пароля">Забыли пароль?</a>
-                <a class="form__link" href="" aria-label="Страница регистрации">Новая регистрация</a>
-              </div>
+            <!-- Search form -->
+            <div class="search-wrapper">
+              <a class="search-button user-navigation__button" href="">
+                <span class="visuallyhidden">Поиск</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+                  <path d="M16.96 15.53l-5.21-5.21A6.46 6.46 0 0013 6.5 6.5 6.5 0 106.5 13a6.46 6.46 0 003.84-1.26l5.2 5.2 1.42-1.41zM6.5 11a4.5 4.5 0 11.01-9.01A4.5 4.5 0 016.5 11z"/>
+                </svg>
+              </a>
+              <form class="search-form user-navigation__modal" action="https://echo.htmlacademy.ru/courses" method="get">
+                <label class="visuallyhidden" for="search">Поиск по сайту</label>
+                <input class="user-navigation__input search-form__input custom-input" type="search" id="search" name="search" placeholder="Крем-брюле">
+              </form>
             </div>
-          </form>
-        </div>
+
+            <!-- Login form -->
+            <div class="login-wrapper">
+              <a class="login-button user-navigation__button" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"><path d="M6 14.88l6.92-5.38L6 4.12v2.92H-.04v4.92H6z"/><path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13a2 2 0 002-2V2a2 2 0 00-2-2z"/></svg>
+                <span>Вход</span>
+              </a>
+              <form class="login-form user-navigation__modal" action="https://echo.htmlacademy.ru/courses" method="get">
+                <label class="visuallyhidden" for="login-email">Введите e-mail</label>
+                <input class="user-navigation__input login-form__input custom-input" type="email" id="login-email" name="email" placeholder="email@example.com" required>
+                <label class="visuallyhidden" for="password">Введите пароль</label>
+                <input class="user-navigation__input login-form__input custom-input" type="password" id="password" name="password" placeholder="••••••" required>
+                <div class="login-button-link-wrapper">
+                  <button class="button login-form__button" type="submit">Войти</button>
+                  <div class="login-link-wrapper">
+                    <a class="form__link" href="" aria-label="Страница востановления пароля">Забыли пароль?</a>
+                    <a class="form__link" href="" aria-label="Страница регистрации">Новая регистрация</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+
         <!-- Cart empty -->
         <!-- Class "cart-button-active" should be on this link when the cart is empty -->
+        <a class="user-navigation__button cart-empty-button cart-button">
+          <span>Пусто</span>
+        </a>
         <div class="cart-wrapper">
-          <a class="user-navigation__button cart-empty-button cart-button">
-            <span>Пусто</span>
-          </a>
         <!-- Cart full with modal  -->
         <!-- Class "cart-button-active" should be on this link when the cart is full -->
           <a href="" class="user-navigation__button cart-full cart-button cart-button-active">
@@ -93,7 +94,7 @@
                 <a class="order-list__product" href="">
                   <span>Пломбир с&nbsp;апельсиновым джемом</span>
                 </a>
-                <span class="order-list__weight">1,5 кг&#215;<span class="order-list__product-prise">200 руб.</span></span>
+                <span class="order-list__weight">1,5 кг &nbsp;&#215;<span class="order-list__product-prise">200 руб.</span></span>
                 <span class="order-list__weight-prise">300 руб.</span>
               </li>
               <li class="cart-full__list-item">
@@ -106,7 +107,7 @@
                 <a class="order-list__product" href="">
                   <span>Клубничный пломбир с&nbsp;присыпкой из&nbsp;белого шоколада</span>
                 </a>
-                <span class="order-list__weight">1,5 кг&#215;<span class="order-list__product-prise">300 руб.</span></span>
+                <span class="order-list__weight">1,5 кг &nbsp;&#215;<span class="order-list__product-prise">300 руб.</span></span>
                 <span class="order-list__weight-prise">450 руб.</span>
               </li>
             </ul>
