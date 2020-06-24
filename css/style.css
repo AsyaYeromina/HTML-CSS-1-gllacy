@@ -39,6 +39,7 @@
     --button-background: linear-gradient(var(--button-light-color), var(--button-dark-color));
     --button-background-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
     --button-active-box-shadow: #942718;
+    --button-hover-box-shadow: #AC1000;
     --link-underline-color:  rgba(255, 255, 255, 0.2);
     --form-link-underline-color: rgba(50, 50, 50, 0.3);
     --form-link-active-color: #E84D37;
@@ -173,6 +174,7 @@ body:not(.main-page)::after{
     background: var(--button-background-hover);
     color: var(--basic-white);
     outline: none;
+    box-shadow: 0px 1px 2px var(--button-hover-box-shadow);
 }
 
 .button:active{
@@ -653,6 +655,7 @@ body:not(.main-page)::after{
     padding: 10px 24px 12px 24px;
     cursor: pointer;
     outline: none;
+    text-shadow: none;
 }
 
 .login-link-wrapper{
@@ -854,6 +857,7 @@ body:not(.main-page)::after{
     padding: 10px 10px 12px 10px;
     align-self: flex-end;
     cursor: pointer;
+    text-shadow: none;
 }
 
 /* Short info (tel number) */
@@ -949,7 +953,6 @@ body:not(.main-page)::after{
     text-align: center;
     border-radius: 70px;
 }
-
 
 /* Switching slides  */
 .slide-switcher{
@@ -1075,6 +1078,7 @@ body:not(.main-page)::after{
     width: auto;
     margin-left: auto;
     text-align: right;
+    text-shadow: none;
 }
 
 /* Hit products  */
@@ -1120,6 +1124,7 @@ body:not(.main-page)::after{
     z-index: -1;
     background-color: var(--user-nav-background);
     border-radius: 4px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
 }
 
 .catalog-item:hover,
@@ -1139,11 +1144,12 @@ body:not(.main-page)::after{
     text-decoration: none;
 }
 
-.catalog-item__link:hover .link-underline,
-.catalog-item__link:focus .link-underline{
+.catalog-item__link:hover .link-style,
+.catalog-item__link:focus .link-style{
     /* box-shadow: 0 1px 0 0 var(--accent-light-color-underline); */
     -webkit-text-decoration-color: var(--accent-light-color-underline);
             text-decoration-color: var(--accent-light-color-underline);
+    color: var(--accent-light-color);
 }
 
 
@@ -1201,6 +1207,7 @@ body:not(.main-page)::after{
     padding: 11px 17px 12px 16px;
     align-self: center;
     bottom: -20px;
+    text-shadow: none;
     will-change: opacity;
     -webkit-animation-name: fadeOut;
             animation-name: fadeOut;
@@ -1350,6 +1357,7 @@ body:not(.main-page)::after{
             text-decoration-skip: objects;
     -webkit-text-decoration-color: var(--blog-link-underline);
             text-decoration-color: var(--blog-link-underline);
+    outline: none;
 }
 
 .blog-article__heading:hover, 
