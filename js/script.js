@@ -4,12 +4,15 @@ var modalClose = modalWindow.querySelector(".feedback_form__close-button");
 var modalName = modalWindow.querySelector(".feedback_form__name-input");
 var modalForm = modalWindow.querySelector(".feedback_form");
 var modalEmail = modalWindow.querySelector(".feedback_form__email-input");
+var modalTextarea = modalWindow.querySelector(".feedback_form__textarea")
 
 var isStorageSupport = true;
-var storage = "";
+var storageName = "";
+var storageEmail = "";
 
 try {
-  storage = localStorage.getItem("login");
+  storageName = localStorage.getItem("name");
+  storageEmail = localStorage.getItem("email");
 } catch (err) {
   isStorageSupport = false;
 }
@@ -20,14 +23,18 @@ modalOpen.addEventListener("click", function (evt) {
     evt.preventDefault();
     modalWindow.classList.add("feedback-modal--show");
 
-    if (storage) {
-        modalName.value = storage;
+    if (storageName) {
+        modalName.value = storageName;
         modalEmail.focus();
     } else {
         modalName.focus();
     }
 
-    modalName.focus();
+    if (storageEmail) {
+        modalEmail.value = storageEmail;
+        modalTextarea.focus();
+      }
+
 });
 
 
@@ -49,6 +56,7 @@ modalForm.addEventListener("submit", function (evt) {
         // Removing before adding class allows animation for every submit attempt 
     } else {
         if (isStorageSupport) {
+            localStorage.setItem("email", modalEmail.value);
             localStorage.setItem("name", modalName.value);
         }
     }
@@ -65,6 +73,3 @@ window.addEventListener("keydown", function (evt) {
         }
     }
   });
-
-
-//   MAP 
