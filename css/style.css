@@ -40,6 +40,7 @@
     --button-background-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
     --button-active-box-shadow: #942718;
     --button-hover-box-shadow: #AC1000;
+    --product-price-text-shadow: rgba(49, 50, 53, 0.5);
     --link-underline-color:  rgba(255, 255, 255, 0.2);
     --form-link-underline-color: rgba(50, 50, 50, 0.3);
     --form-link-active-color: #E84D37;
@@ -239,6 +240,7 @@ body:not(.main-page)::after{
 .width-big-wrapper{
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 
@@ -1184,7 +1186,7 @@ body:not(.main-page)::after{
     font-size: 45px;
     line-height: 1;
     font-weight: 700;
-    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+    text-shadow: 0px 1px 3px var(--product-price-text-shadow);
 }
 
 .catalog-item__price-desc{
@@ -1441,6 +1443,13 @@ body:not(.main-page)::after{
        object-fit: cover;
 }
 
+.address iframe{
+    position: absolute;
+    z-index: 1;
+    border: none;
+    width: 100%;
+}
+
 .address::after{
     position: absolute;
     content: " ";
@@ -1454,6 +1463,7 @@ body:not(.main-page)::after{
 
 .address-container{
     position: absolute;
+    z-index: 2;
     box-sizing: border-box;
     padding: 32px 24px;
     max-height: 410px;
@@ -1515,9 +1525,10 @@ body:not(.main-page)::after{
     padding: 16px 25px 27px 24px;
     width: 477px;
     z-index: 20;
-    left: 50%;
-    transform: translateX(-50%);
     top: 338px;
+    right: 0;
+    left: 0;
+    margin: auto;
     background-color: var(--form-background-color);
     border-radius: 4px;
     box-shadow: var(--modal-box-shadow);
@@ -1584,7 +1595,64 @@ body:not(.main-page)::after{
     width: 100vw;
     height: 100vh;
     background: var(--modal-background-shadow);
+    display: none;
 }
+
+.feedback-modal--show{
+    display: block;
+}
+
+.feedback-modal--show .feedback_form{
+    animation: bounce 0.6s;
+}
+
+.feedback-modal .feedback-modal--error{
+    animation: shake 0.6s;
+}
+
+/* Animation  */
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+
+    70% {
+        transform: translateY(30px);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+
+/* FOOTER  */
 
 /* Footer grid */
 .main-footer{
@@ -2145,8 +2213,4 @@ body:not(.main-page)::after{
 
 a:not([href]).pagination__arrow {
     opacity: 0.2;
-}
-
-.feedback-modal{
-    display: none;
 }

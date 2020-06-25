@@ -313,25 +313,26 @@
             </div>
             </div>
         <!-- MAP & ADDRESS -->
+        <section class="address">
+            <h2 class="visuallyhidden">Контакты</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.128559654117!2d30.329313000000003!3d59.939372!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRltGPLCAxOTExODY!5e0!3m2!1suk!2sua!4v1593042590695!5m2!1suk!2sua" width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             <div class="width-big-wrapper">
-                <section class="address">
-                    <h2 class="visuallyhidden">Контакты</h2>
-                    <img class="address__img" src="img/map.jpg" width="1200" height="430" alt="Карта">
-                    <div class="address-container">
-                        <p class="address-container__item address-container__item--shop">
-                            <span>Адрес главного офиса и&nbsp;офлайн&NoBreak;-&NoBreak;магазина:</span>
-                            <span class="address-container__item-bold">ул. Большая Конюшенная, 19/8, Санкт-Петербург</span>
-                        </p>
-                        <p class="address-container__item address-container__item--phone">
-                            <span>Для заказов по телефону:</span>
-                            <a class="address-phone address-container__item-bold" href="tel:88124502525">8 812 450-25-25</a> 
-                            <span>(с 10 до 20 ежедневно)</span>
-                        </p>
-                        <a class="address-container__button button" href="#" >Форма обратной связи</a>
-                    </div>
-                </section>
+                <img class="address__img" src="img/map.jpg" height="430" width="430" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+                <div class="address-container">
+                    <p class="address-container__item address-container__item--shop">
+                        <span>Адрес главного офиса и&nbsp;офлайн&NoBreak;-&NoBreak;магазина:</span>
+                        <span class="address-container__item-bold">ул. Большая Конюшенная, 19/8, Санкт-Петербург</span>
+                    </p>
+                    <p class="address-container__item address-container__item--phone">
+                        <span>Для заказов по телефону:</span>
+                        <a class="address-phone address-container__item-bold" href="tel:88124502525">8 812 450-25-25</a> 
+                        <span>(с 10 до 20 ежедневно)</span>
+                    </p>
+                    <a class="address-container__button button" href="#" >Форма обратной связи</a>
+                </div>
             </div>
-        </main>
+        </section>
+    </main>
 
         <!-- FOOTER  -->
 
@@ -398,6 +399,8 @@
         </footer>
 
     <!-- FEEDBACK FORM (modal window)-->
+    <!-- class "feedback-modal--show" is added to this container after click on "address-container__button" -->
+    <!-- class "feedback-modal--show" is remowed after click on "feedback_form__close-button" -->
         <div class="feedback-modal">
             <form class="feedback_form" action="https://echo.htmlacademy.ru/courses" method="get">
                 <p class="feedback_form__title">Мы обязательно вам ответим!</p>
@@ -406,17 +409,19 @@
                     <legend class="visuallyhidden">Форма обратной связи</legend>
                     <p>
                         <label class="visuallyhidden" for="feedback_name">Имя Фамилия</label>
-                        <input class="feedback_form__input custom-input" type="text" id="feedback_name" name="feedback_name" placeholder="Имя Фамилия" required>
+                        <input class="feedback_form__input feedback_form__name-input custom-input" type="text" id="feedback_name" name="feedback_name" placeholder="Имя Фамилия">
                     </p>
                     <p>
                         <label class="visuallyhidden" for="feedback_email">Ваш email</label>
-                        <input class="feedback_form__input custom-input" type="email" id="feedback_email" name="feedback_email" placeholder="email@example.com" required>
+                        <input class="feedback_form__input feedback_form__email-input custom-input" type="email" id="feedback_email" name="feedback_email" placeholder="email@example.com">
                     </p>
                     <textarea class="feedback_form__textarea custom-input" name="message" id="message" rows="6" cols="50" required>В свободной форме</textarea>
                 </fieldset>
                 <button class="button feedback_form__submit-button" type="submit">Отправить</button>
             </form>
         </div>
+
+        <script src="js/script.js"></script>
 
     </body>
 </html>
