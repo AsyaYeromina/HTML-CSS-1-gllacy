@@ -986,11 +986,11 @@ body:not(.main-page)::after{
     outline: none;
 }
 
-.slide-switcher__button:active{
+.current-slide-button{
     background-color: var(--basic-white);
 }
 
-.current-slide-button{
+.current-slide-button:focus{
     background-color: var(--basic-white);
 }
 

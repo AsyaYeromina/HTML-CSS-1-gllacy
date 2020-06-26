@@ -72,4 +72,28 @@ window.addEventListener("keydown", function (evt) {
             modalForm.classList.remove("feedback-modal--error");
         }
     }
-  });
+});
+
+
+
+//   Slider 
+
+
+var slideSwitcherArray = document.querySelectorAll('.slide-switcher__button');
+var slideArray = document.querySelectorAll('.slide');
+var page = document.querySelector('.main-page');
+
+
+for (let index = 0; index < slideSwitcherArray.length; index++) {
+    
+    slideSwitcherArray[index].addEventListener("click", function (event){
+
+        document.querySelector('.current-slide-button').classList.remove("current-slide-button");
+        var currentSwitcherButton = event.target;
+        currentSwitcherButton.classList.add("current-slide-button");
+        document.querySelector('.current-slide').classList.remove("current-slide");
+        slideArray[index].classList.add('current-slide');
+
+        page.className = page.className.replace(/page-\d+/gi, "page-"+(index+1));
+    })
+}
