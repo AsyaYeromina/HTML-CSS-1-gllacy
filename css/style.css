@@ -1804,6 +1804,7 @@ body:not(.main-page)::after{
 .breadcrumbs__list-item{
     position: relative;
     display: inline-block;
+    vertical-align: top;
     margin-right: 19px;
     list-style: none;
     font-size: 14px;
