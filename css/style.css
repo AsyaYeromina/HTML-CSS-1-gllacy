@@ -1728,7 +1728,7 @@ body:not(.main-page)::after{
 
 .socials__link:active .socials__icon{
     fill: var(--basic-white);
-    border: var(--social-icon-fill-active);
+    border: 2px solid var(--social-icon-fill-active);
 }
 
 
