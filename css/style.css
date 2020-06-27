@@ -38,6 +38,7 @@
     --button-text-shadow: rgba(160, 32, 11, 0.76);
     --button-background: linear-gradient(var(--button-light-color), var(--button-dark-color));
     --button-background-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+    --button-background-active: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
     --button-active-box-shadow: #942718;
     --button-hover-box-shadow: #AC1000;
     --product-price-text-shadow: rgba(49, 50, 53, 0.5);
@@ -179,6 +180,7 @@ body:not(.main-page)::after{
 }
 
 .button:active{
+    background: var(--button-background-active);
     box-shadow: inset 0px 2px 2px var(--button-active-box-shadow);
     color: var(--basic-white);
     outline: none;
