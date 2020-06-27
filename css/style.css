@@ -992,6 +992,10 @@ body:not(.main-page)::after{
     outline: none;
 }
 
+.slide-switcher__button:active{
+    background-color: var(--basic-white);
+}
+
 .current-slide-button{
     background-color: var(--basic-white);
 }
