@@ -1883,13 +1883,13 @@ body:not(.main-page)::after{
 }
 
 .radiobuttons-field, .checkbox-field{
-    padding: 7px 17px 3px 20px;
+    padding: 5px 17px 4px 20px;
     background-color: var(--user-nav-background);
     border-radius: 20px;
 }
 
 .checkbox-field{
-    padding: 4px 22px 5px 0;
+    padding: 3px 22px 6px 0;
 }
 
 /* Aligning all filters with flex  */
@@ -1904,7 +1904,7 @@ body:not(.main-page)::after{
 /* Aligning each filter and label with flex  */
 .sort-wrapper, .range-wrapper, .radiobuttons-wrapper, .checkbox-wrapper{
     margin-right: 15px;
-    margin-bottom: 13px;
+    margin-bottom: 12px;
     display: flex;
     flex-direction: column;
 }
@@ -2040,7 +2040,7 @@ body:not(.main-page)::after{
 /* Radiobuttons filter */
 .filter-input-radio + label::before{
     position: absolute;
-    top: 0;
+    top: 2px;
     left: -34px;
     content: " ";
     width: 22px;
@@ -2071,7 +2071,7 @@ body:not(.main-page)::after{
 
 /* Checkbox filter  */
 .checkbox-wrapper{
-    margin-top: 3px;
+    margin-top: 4px;
     margin-right: 14px;
 }
 
@@ -2088,10 +2088,10 @@ body:not(.main-page)::after{
     content: " ";
     width: 25px;
     height: 22px;
-    left: -33px;
-    top: 3px;
+    left: -32px;
+    top: 5px;
     background-image: url(../img/svg/checkbox-off.svg);
-    background-size: 22px 22px;
+    background-size: 20px 20px;
     background-repeat: no-repeat;
     opacity: 0.8;
   }
@@ -2108,12 +2108,12 @@ body:not(.main-page)::after{
 
 .filter-input-checkbox:checked + label::before{
     position: absolute;
-    width: 26px;
+    width: 25px;
     height: 22px;
-    left: -34px;
-    top: 3px;
+    left: -32px;
+    top: 5px;
     background-image: url(../img/svg/checkbox-on.svg);
-    background-size: 25px 22px;
+    background-size: 23px 20px;
     opacity: 0.8;
 }
 
@@ -2129,8 +2129,8 @@ body:not(.main-page)::after{
 
 /* Filter button  */
 .filter-button{
-    margin: 0 15px 13px 0;
-    padding: 6px 28px 5px 26px;
+    margin: 0 15px 12px 0;
+    padding: 5px 28px 5px 26px;
     display: inline-block;
     vertical-align: top;
     align-self: flex-end;
