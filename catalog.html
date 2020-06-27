@@ -5,7 +5,7 @@
         <title>Gllacy shop - Каталог</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body class="page">
 
@@ -104,9 +104,9 @@
                         <form class="cart-form user-navigation__modal" action="https://echo.htmlacademy.ru/courses" method="get" aria-label="Список товаров в корзине">
                             <ul class="cart-full__order-list">
                                 <li class="cart-full__list-item">
-                                    <a class="cart-full__delete-button" href="#">
+                                    <button class="cart-full__delete-button" type="button">
                                         <span class="visuallyhidden">Удалить</span>
-                                    </a>
+                                    </button>
                                     <a class="order-list__img" href="#" tabindex="-1">
                                         <img src="img/icecream1.jpg" width="33" height="33" alt="Фотография мороженого">
                                     </a>
@@ -117,9 +117,9 @@
                                     <span class="order-list__weight-price">300 руб.</span>
                                 </li>
                                 <li class="cart-full__list-item">
-                                    <a class="cart-full__delete-button" href="#">
+                                    <button class="cart-full__delete-button" type="button">
                                         <span class="visuallyhidden">Удалить</span>
-                                    </a>
+                                    </button>
                                     <a class="order-list__img" href="#" tabindex="-1">
                                         <img src="img/icecream3.jpg" width="33" height="33" alt="Фотография мороженого">
                                     </a>
@@ -139,7 +139,11 @@
                     </div>
                 </div>
             </nav>
-            <p class="short-info">с 10 до 20, ежедневно<br><a class="phone-number" href="tel:88124502525">8 812 450-25-25</a></p>
+
+            <p class="short-info">
+                <span>с 10 до 20, ежедневно</span>
+                <a class="phone-number" href="tel:88124502525">8 812 450-25-25</a>
+            </p>
         </header>
 
         <!-- MAIN  -->

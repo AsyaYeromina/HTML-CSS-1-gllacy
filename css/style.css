@@ -804,10 +804,11 @@ body:not(.main-page)::after{
     width: 11px;
     height: 11px;
     background-size: 11px 11px;
-    top: 2px;
-    right: 3px;
+    top: 1px;
+    right: 2px;
     grid-column: 1/2;
     cursor: pointer;
+    border: none;
 }
 
 .order-list__img{
@@ -873,6 +874,10 @@ body:not(.main-page)::after{
     line-height: 1.14;
     font-weight: 700;
     text-align: right;
+}
+
+.short-info span{
+    display: block;
 }
 
 .short-info .phone-number{
