@@ -1520,19 +1520,18 @@ body:not(.main-page)::after{
 
 /* FEEDBACK FORM MODAL  */
 .feedback_form{
-    position: fixed;
+    position: relative;
     box-sizing: border-box;
     padding: 16px 25px 27px 24px;
-    width: 477px;
-    z-index: 20;
-    top: 338px;
-    right: 0;
-    left: 0;
+    max-width: 477px;
+    max-height: 100vh;
+    overflow-y: auto;
     margin: auto;
     background-color: var(--form-background-color);
     border-radius: 4px;
     box-shadow: var(--modal-box-shadow);
 }
+
 
 .feedback_form fieldset{
     padding: 0;
@@ -1568,7 +1567,8 @@ body:not(.main-page)::after{
     margin-bottom: 20px;
     padding: 14px;
     height: 44px;
-    width: 267px;
+    max-width: 267px;
+    width: 100%;
     border-radius: 4px;
 }
 
@@ -1599,7 +1599,7 @@ body:not(.main-page)::after{
 }
 
 .feedback-modal--show{
-    display: block;
+    display: flex;
 }
 
 .feedback-modal--show .feedback_form{
