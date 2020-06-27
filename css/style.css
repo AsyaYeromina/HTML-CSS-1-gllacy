@@ -63,6 +63,7 @@
     --range-input-toggle-shadow: rgba(171, 171, 171, 0.3);
     --modal-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
     --modal-background-shadow: rgba(0, 0, 0, 0.3);
+    --catalog-card-hover-shadow: rgba(0, 0, 0, 0.2);
 }
 
 /* Global styles */
@@ -1138,7 +1139,7 @@ body:not(.main-page)::after{
     z-index: -1;
     background-color: var(--user-nav-background);
     border-radius: 4px;
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 20px 20px var(--catalog-card-hover-shadow);
 }
 
 .catalog-item:hover,
