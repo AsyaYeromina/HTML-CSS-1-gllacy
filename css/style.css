@@ -160,6 +160,7 @@ body:not(.main-page)::after{
 /* Buttons */
 .button{
     padding: 14px 22px 14px 22px;
+    text-align: center;
     font-size: 18px;
     line-height: 1.11;
     font-weight: 700;
@@ -1092,7 +1093,6 @@ body:not(.main-page)::after{
     display: block;
     width: auto;
     margin-left: auto;
-    text-align: right;
     text-shadow: none;
 }
 
@@ -1894,7 +1894,7 @@ body:not(.main-page)::after{
 
 /* Aligning all filters with flex  */
 .filters-fieldset-container{
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
