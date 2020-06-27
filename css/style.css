@@ -597,7 +597,7 @@ body:not(.main-page)::after{
     background-color: var(--basic-white);
 }
 
-.search-wrapper:focus .search-button svg{
+.search-wrapper:focus .search-button__svg{
     fill: var(--basic-dark-text-color);
 }
 
@@ -617,7 +617,7 @@ body:not(.main-page)::after{
     background-color: var(--basic-white);
 }
 
-.login-wrapper:focus .login-button svg{
+.login-wrapper:focus .login-button__svg{
     fill: var(--basic-dark-text-color);
 }
 
