@@ -260,7 +260,7 @@ body:not(.main-page)::after{
 .logo-link{
     display: block;
     margin-right: 11px;
-    flex-basis: 154px;
+    flex-shrink: 0;
 }
 
 .logo{
@@ -484,7 +484,7 @@ body:not(.main-page)::after{
     justify-content: flex-end;
     align-items: start;
     flex-wrap: wrap;
-    flex-basis: 500px;
+    flex-basis: 40%;
 }
 
 .user-navigation__button{
