@@ -1867,8 +1867,10 @@ body:not(.main-page)::after{
     margin: 0;
     margin-bottom: 27px;
     padding: 0;
+    max-width: 70%;
     font-size: 35px;
     line-height: 1.17;
+    font-weight: 700;
 }
 
 
@@ -1878,6 +1880,7 @@ body:not(.main-page)::after{
     padding: 0;
     margin: 0;
     border: none;
+    max-width: 70%;
 }
 
 .filter-name {
@@ -1894,7 +1897,7 @@ body:not(.main-page)::after{
 }
 
 .checkbox-field{
-    padding: 3px 22px 6px 0;
+    padding: 3px 15px 6px 0;
 }
 
 /* Aligning all filters with flex  */
@@ -1903,7 +1906,6 @@ body:not(.main-page)::after{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 80%;
 }
 
 
@@ -2021,18 +2023,19 @@ body:not(.main-page)::after{
     list-style: none;
 }
 
+.radiobuttons-field{
+    padding-left: 0;
+    padding-right: 12px;
+}
+
 .field__item{
     position: relative;
-    padding-left: 28px;
-    padding-right: 26px;
+    padding-left: 48px;
+    padding-right: 6px;
 }
 
 .radiobuttons-field .field__item{
-    padding-right: 24px;
-}
-
-.field__item:last-child{
-    padding-right: 0;
+    padding-right: 4px;
 }
 
 .radiobuttons-field label,
@@ -2079,10 +2082,6 @@ body:not(.main-page)::after{
 .checkbox-wrapper{
     margin-top: 4px;
     margin-right: 14px;
-}
-
-.checkbox-field__item:first-child{
-    padding-left: 48px;
 }
 
 .checkbox-field__item label{
@@ -2137,6 +2136,7 @@ body:not(.main-page)::after{
 .filter-button{
     margin: 0 15px 12px 0;
     padding: 5px 28px 5px 26px;
+    max-width: 25%;
     display: inline-block;
     vertical-align: top;
     align-self: flex-end;
