@@ -1591,8 +1591,6 @@ body:not(.main-page)::after{
     padding: 13px;
     width: 100%;
     min-height: 154px;
-    color: var(--inputs-semi-light-text-color);
-    font-weight: 400;
     border-radius: 4px;
     resize: none;
 }
