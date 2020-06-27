@@ -79,9 +79,9 @@ window.addEventListener("keydown", function (evt) {
 //   Slider 
 
 
-var slideSwitcherArray = document.querySelectorAll('.slide-switcher__button');
-var slideArray = document.querySelectorAll('.slide');
-var page = document.querySelector('.main-page');
+var slideSwitcherArray = document.querySelectorAll(".slide-switcher__button");
+var slideArray = document.querySelectorAll(".slide");
+var page = document.querySelector(".main-page");
 
 // Loop for slide switching buttons, 
 // Finding the index (index number) of an array element (slide switcher button)
@@ -92,7 +92,7 @@ for (let index = 0; index < slideSwitcherArray.length; index++) {
 
         // Changing classes for buttons
         // Deleting active class from current slide switching button
-        document.querySelector('.current-slide-button').classList.remove("current-slide-button");
+        document.querySelector(".current-slide-button").classList.remove("current-slide-button");
         // Naming the certain button which has an event (click).
         var currentSwitcherButton = event.target;
         // Setting active class for the button
@@ -100,9 +100,9 @@ for (let index = 0; index < slideSwitcherArray.length; index++) {
 
         // Changing classes for slides
         // Deleting active class from current slide
-        document.querySelector('.current-slide').classList.remove("current-slide");
+        document.querySelector(".current-slide").classList.remove("current-slide");
         // Setting active class for the slide with index (index-number) of the button 
-        slideArray[index].classList.add('current-slide');
+        slideArray[index].classList.add("current-slide");
 
         // Changing class for page (background color for body)
         // Changing class name that starts with "page-", adding index number (index+1 because index starts from 0)
