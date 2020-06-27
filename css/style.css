@@ -300,6 +300,7 @@ body:not(.main-page)::after{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    flex-shrink: 1;
 }
 
 .main-navigation__blank-page{
@@ -484,7 +485,8 @@ body:not(.main-page)::after{
     justify-content: flex-end;
     align-items: start;
     flex-wrap: wrap;
-    flex-basis: 40%;
+    min-width: 40%;
+    flex-shrink: 2;
 }
 
 .user-navigation__button{
