@@ -1059,7 +1059,7 @@ body:not(.main-page)::after{
 
 .product-banners__item-2{
     background-color: var(--second-banner-background);
-    background-image: url(../img/choсolate_background.jpg);
+    background-image: url(../img/chocolate_background.jpg);
 }
 
 .product-banners__title{
