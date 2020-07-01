@@ -1470,17 +1470,6 @@ body:not(.main-page)::after{
     width: 100%;
 }
 
-.address::after{
-    position: absolute;
-    content: " ";
-    width: 80px;
-    height: 140px;
-    top: 136px;
-    left: 266px;
-    background-image: url(../img/svg/pin.svg);
-    background-repeat: no-repeat;
-}
-
 .address-container{
     position: absolute;
     z-index: 2;
